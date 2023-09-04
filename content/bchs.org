@@ -1,7 +1,7 @@
 ---
 title: "BCHS: BSD, C, httpd, SQLite"
 date: 2022-11-03T15:00:00+01:00
-tags: ['openbsd','c','httpd','website','ssl']
+tags: ['openbsd','c','httpd','website','tls','bchs','ssl-certificate','networking','cgi']
 ---
 
 * BCHS is a software stack for web development. It uses a BSD based OS (operating system) as the server's system, in my opinion the best suited OS for servers is OpenBSD because it is designed with code correctness and proactive security in mind, it has it's own software ecosystem made to work best together, software we will be using is httpd, LibreSSL and clang. httpd is OpenBSD's own http server, it is much more minimal than something like nginx or apache, it has everything we need and it's already there. C is the simplest programming language, it's basically just a portable assembly with a set of development tools and libraries. We won't be using SQLite as we're just making a simple static website.
@@ -66,7 +66,7 @@ cc -static -g -W -Wall -Wextra -o cgi cgi.c
 install -o www -g www -m 0500 cgi /var/www/cgi-bin
 #+end_src
 
-** SSL
+** TLS
 *** ~openssl ecparam -name secp384r1 -genkey -noout -out /etc/ssl/private/lubiak.k.vu.key~ Generate a NIST/SECG curve over a 384-bit prime field ECDSA key.
 *** ~openssl req -key /etc/ssl/private/lubiak.k.vu.key -new -out /etc/ssl/private/lubiak.k.vu.csr~ Generate /Certificate Signing Request/, if you want to have a certificate signed by a Certificate Authority then give them ~/etc/ssl/private/lubiak.k.vu.csr~ and place the received certificate in ~/etc/ssl/lubiak.k.vu.crt~, if you want to sign your certificate yourself (like I did) then go to the next step.
 *** ~openssl x509 -sha256 -req -days 365 -in /etc/ssl/private/lubiak.k.vu.csr -signkey /etc/ssl/private/lubiak.k.vu.key -out /etc/ssl/lubiak.k.vu.crt~ Generate a self-signed certificate that expires after 365 days.

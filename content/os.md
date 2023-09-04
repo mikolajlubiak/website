@@ -1,7 +1,7 @@
 ---
 title: "Operating Systems"
 date: 2022-11-18T15:00:00+01:00
-tags: ['wip','os','linux','windows']
+tags: ['os','userland','kernel','linux','windows','arch-linux','linux-mint','ubuntu','gentoo-linux','windows-xp','windows-7','windows-10','windows-11']
 ---
 
 *WORK IN PROGRESS*

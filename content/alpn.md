@@ -1,7 +1,7 @@
 ---
 title: "TLS-ALPN-01"
 date: 2023-08-26T15:00:00+01:00
-tags: ['tls','ssl','alpn','acme','ssl-certificate','website','hosting']
+tags: ['tls','alpn','acme','ssl-certificate','website','hosting','caddy']
 ---
 
 # Automated Certificate Management Environment Transport Layer Security Application‑Layer Protocol Negotiation Challenge Extension 🤓🤓🤓
