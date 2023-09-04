@@ -1,4 +1,4 @@
-baseURL = 'https://mikolajl.netlify.app'
+baseURL = 'https://lubiak.netlify.app'
 languageCode = 'en-us'
 title = '/SIOS/'
 theme = 'lugo'
