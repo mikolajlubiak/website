@@ -20,7 +20,7 @@ At this point, young Mikołaj gave up.
 But **3 years later** I was testing some Go(lang) web frameworks, and they often listed *autotls* on their feature lists.
 I've decided to test what it is and **magically ✨✨✨** it generated a signed private key for me! 😲 At this point, I was amazed and wanted to find out **HOW?!**.
 If you don't know exactly what you want to ask about, there isn't a better place than *StackOverflow™️*, so I've asked [this](https://stackoverflow.com/questions/76968320/how-did-gin-generate-ssl-certificate-for-me-although-port-80-and-cname-are-block) question.
-I got the response that this magic spell can be used by saying *Automated Certificate Management Environment Transport Layer Security Application‑Layer Protocol Negotiation Challenge Extension*, TLS-ALPN-01 for short.
+I got the response that this magic spell can be used by saying [*Automated Certificate Management Environment Transport Layer Security Application‑Layer Protocol Negotiation Challenge Extension*, TLS-ALPN-01 for short](https://letsencrypt.org/docs/challenge-types/#tls-alpn-01).
 
 After **a lot** of ~~googling~~ *searching-information-on-the-internet* I learned that TLS-ALPN-01 does this magic by not requiring port 80 to do the challenge, the only thing that you need is open port 443 (HTTPS port).
 I could not use this type of challenge before because it is not implemented in the *certbot* yet. Hopefully, I found [this](https://caddyserver.com/) web server that had it implemented, and the only thing I needed to do to have a static HTTPS website is `sudo caddy file-server --root /mnt/HDD/git/website/public --domain lubiak.k.vu`... **awesome ✨✨✨**.
