@@ -43,13 +43,5 @@
 	txt.innerHTML = "404 Not Found".bold() ;
 	document.getElementById("anime").appendChild(txt) ;
 </script>
-{{ block "footer" . }}
-<footer>
-	<br>
-	<a href="{{ .Site.BaseURL }}"><h5>{{ .Site.BaseURL }}</h5></a>
-	{{- if .Param "showrss" }}<a href="/index.xml"><img src="/rss.svg" style="max-height:1.5em" alt="RSS Feed" title="Subscribe via RSS for updates."></a>{{ end }}
-	<a href="mailto:drKbz3wcX4ZuQE7R@danwin1210.de"><h4>drKbz3wcX4ZuQE7R@danwin1210.de</h4></a>
-</footer>
-{{ end }}
 </body>
 </html>
