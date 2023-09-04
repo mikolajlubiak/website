@@ -23,8 +23,8 @@ server "http" {
 server "https" {
     listen on * tls port 443
     tls {
-        certificate "/etc/ssl/mikolajl.netlify.app.crt"
-        key "/etc/ssl/private/mikolajl.netlify.app.key"
+        certificate "/etc/ssl/lubiak.k.vu.crt"
+        key "/etc/ssl/private/lubiak.k.vu.key"
     }
     fastcgi
     root "/cgi-bin/cgi"
@@ -67,9 +67,9 @@ install -o www -g www -m 0500 cgi /var/www/cgi-bin
 #+end_src
 
 ** SSL
-*** ~openssl ecparam -name secp384r1 -genkey -noout -out /etc/ssl/private/mikolajl.netlify.app.key~ Generate a NIST/SECG curve over a 384-bit prime field ECDSA key.
-*** ~openssl req -key /etc/ssl/private/mikolajl.netlify.app.key -new -out /etc/ssl/private/mikolaj.k.vu.csr~ Generate /Certificate Signing Request/, if you want to have a certificate signed by a Certificate Authority then give them ~/etc/ssl/private/mikolaj.k.vu.csr~ and place the received certificate in ~/etc/ssl/mikolaj.k.vu.crt~, if you want to sign your certificate yourself (like I did) then go to the next step.
-*** ~openssl x509 -sha256 -req -days 365 -in /etc/ssl/private/mikolajl.netlify.app.csr -signkey /etc/ssl/private/mikolaj.k.vu.key -out /etc/ssl/mikolaj.k.vu.crt~ Generate a self-signed certificate that expires after 365 days.
+*** ~openssl ecparam -name secp384r1 -genkey -noout -out /etc/ssl/private/lubiak.k.vu.key~ Generate a NIST/SECG curve over a 384-bit prime field ECDSA key.
+*** ~openssl req -key /etc/ssl/private/lubiak.k.vu.key -new -out /etc/ssl/private/lubiak.k.vu.csr~ Generate /Certificate Signing Request/, if you want to have a certificate signed by a Certificate Authority then give them ~/etc/ssl/private/lubiak.k.vu.csr~ and place the received certificate in ~/etc/ssl/lubiak.k.vu.crt~, if you want to sign your certificate yourself (like I did) then go to the next step.
+*** ~openssl x509 -sha256 -req -days 365 -in /etc/ssl/private/lubiak.k.vu.csr -signkey /etc/ssl/private/lubiak.k.vu.key -out /etc/ssl/lubiak.k.vu.crt~ Generate a self-signed certificate that expires after 365 days.
 
 ** Final deploying
 *** ~sh ~/cgi/cgi.sh~ Compile and deploy your source code.
