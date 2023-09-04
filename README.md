@@ -1,2 +1,2 @@
-# My personal website
-## about DevOps, System Administation and general Linux retardancy.
+# WEBSITE
+## My personal website about sysadmin, devops and programming.
