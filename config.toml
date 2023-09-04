@@ -1,4 +1,4 @@
-baseURL = 'mikolajl.netlify.app'
+baseURL = 'https://mikolajl.netlify.app'
 languageCode = 'en-us'
 title = '/SIOS/'
 theme = 'lugo'
