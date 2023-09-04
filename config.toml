@@ -1,4 +1,4 @@
-baseURL = 'https://lubiak.netlify.app'
+baseURL = 'https://lubiak.pages.dev/'
 languageCode = 'en-us'
 title = 'Mikołaj Lubiak'
 theme = 'lugo'
