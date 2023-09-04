@@ -29,8 +29,6 @@
 {{ block "footer" . }}
 <footer>
 	<br>
-	{{ partial "taglist.html" . }}
-	<br>
 	{{- if .Param "showrss" }}<a href="/index.xml"><img src="/rss.svg" style="max-height:1.5em" alt="RSS Feed" title="Subscribe via RSS for updates."></a>{{ end }}
 	<a href="mailto:funtoomen@disroot.org"><h4>funtoomen@disroot.org</h4></a>
 </footer>
