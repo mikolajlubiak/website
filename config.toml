@@ -1,5 +1,4 @@
-baseURL = 'https://mikolaj.surge.sh/'
+baseURL = 'mikolajl.netlify.app'
 languageCode = 'en-us'
 title = '/SIOS/'
 theme = 'lugo'
-params.showrss = true
