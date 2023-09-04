@@ -4,11 +4,12 @@ date: 2023-06-22T13:00:00+02:00
 tags: ['source','gamedev']
 ---
 
-# Source Engine
 ## Source is a 3D game engine developed by Valve Corporation. Debuted in Counter-Strike in June 2004. Half-Life 2 followed shortly after Source and has been in active development ever since. Unusually for game engines, Source does not have a meaningful version numbering scheme. Instead, it will be developed in continuous incremental updates.
 ## Source is designed to support first-person shooters, but is also used professionally to develop role-playing games, side-scrolling games, puzzles, MMORPGs, top-down shooters, and real-time strategy games.
 
+{{< center >}}
 # Technology
+{{< /center >}}
 * Direct3D rendering on Microsoft Windows PC, Xbox and Xbox 360; OpenGL rendering on Mac OS X, Linux and PlayStation 3.
 * High Dynamic Range Rendering (HDR).
 * Lag-compensated client/server network model
@@ -25,7 +26,9 @@ tags: ['source','gamedev']
 * Distributed map compiler
 * Fabric simulation
 
+{{< center >}}
 # Modularity and notable upgrades
+{{< /center >}}
 ### Source is designed to evolve incrementally as technology advances, unlike competitors' "version jumps" that prevent backward compatibility. Steam allows Valve to distribute automatic updates with new versions of the engine to large numbers of users. However, in practice there have been occasional breaks in this compatibility chain.
 ### Both Episode One and Orange Box introduced new versions of the engine that could not be used to run older games or his mods unless the developer upgraded the code and possibly the content. However, in both cases, version updates require significantly less effort than competing engines. This was demonstrated in 2010 when Valve updated all core source games to the latest engine version.
 ### Since the release of his Source in 2004, major architectural changes have been made, including:
@@ -46,7 +49,9 @@ tags: ['source','gamedev']
 #### Linux support (2012, multiple games)
 * The first of Valve's games to support Linux was Team Fortress 2, the port released in October 2012 along with the closed beta of the Linux version of Steam.
 
+{{< center >}}
 # Future technology
+{{< /center >}}
 ## Linux support
 * On July 16, 2012, Valve announced that they were in the process of porting their Source Engine game Left 4 Dead 2 to Ubuntu Linux version 12.04. The promised port of Left 4 Dead 2 didn't make it to the closed beta and was instead replaced with a fully functional port of Team Fortress 2.
 ## New authoring tools
@@ -59,15 +64,21 @@ tags: ['source','gamedev']
 ## Origin
 * The source has been stripped from his GoldSrc engine, which itself is a heavily modified version by John D. Carmack Quake engine.
 
+{{< center >}}
 # Criticism
+{{< /center >}}
 ## Tool set
 * Valve is currently creating a number of new tools.
 * Source SDK tools have been criticized for being outdated and hard to use. Many tools, including those for texture and model compilation, require some level of text editor scripting by the user before they can be run on the command line. Sometimes with long console commands. Spearheading this silliness was at the University of London, where after a short stint at Source, the computer explored professional architectural visualization in his games. It's time to move on to the engine. A third party tool provides a GUI but is not supported by Valve.
 * The user interface of Valve's Hammer Editor, the SDK's world-building tool, hasn't changed much since it was first released in 1998 for GoldSrc and the original Half-Life.
 
+{{< center >}}
 # Valve Developer Community
+{{< /center >}}
 ### On June 28th, 2005, Valve opened a wiki. VDC has replaced Valve's static Source SDK documentation with a complete community site powered by MediaWiki. Within days, Valve reported that "the number of useful articles nearly doubled." These new articles cover previously undocumented Counter-Strike.
 ### Source Bot (added by bot author Mike Booth), Valve's NPC AI, advice to his mod team on setting up source control, and more articles. paper
 
+{{< center >}}
 # Papers
+{{< /center >}}
 ### Valve employees occasionally contribute to various events and publications that discuss various aspects of Source's development, including SIGGRAPH, Game Developer Magazine and Game Developers Conference. They are aimed at experts and often discuss complex concepts.
