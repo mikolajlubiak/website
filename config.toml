@@ -1,0 +1,5 @@
+baseURL = 'https://mikolaj.surge.sh/'
+languageCode = 'en-us'
+title = '/SIOS/'
+theme = 'lugo'
+params.showrss = true

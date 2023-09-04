@@ -1,0 +1,77 @@
+---
+title: "BCHS: BSD, C, httpd, SQLite"
+date: 2022-11-03T15:00:00+01:00
+tags: ['openbsd','c','httpd','website','ssl']
+---
+
+* BCHS is software stack for web development. It uses a BSD based OS (operating system) as server's system, in my opinion best suited OS for servers is OpenBSD because it is designed with code correctness and proactive security in mind, it has it's own software ecosystem made to work best with each other, software that we'll be using is ~httpd~, ~LibreSSL~ and ~clang~. ~httpd~ is OpenBSD's own http server, it is way more minimal than something like ~nginx~ or ~apache~, it has all we need and it's already there. C is the simplest programming language, basically it's just portable assembly with set of development tools and libraries. We won't use SQLite since we are just making simple static website.
+
+** Network
+*** Open port 80 and 443 in your router.
+*** Enable ingoing connections on port 80 and 443 in your system (OpenBSD) firewall. It's allowed by default.
+
+** OpenBSD
+*** ~systemctl enable httpd~ Start server on startup automatically.
+*** ~systemctl enable slowcgi~ Start slowcgi on startup automatically.
+*** ~systemctl start httpd~ Start server for now without need to reboot.
+*** ~systemctl start httpd~ Start slowcgi for now without need to reboot.
+*** ~vi /etc/httpd.conf~ Edit httpd config file.
+#+begin_src
+server "http" {
+    listen on * port 80 block return 301 "https://$HTTP_HOST$REQUEST_URI"
+}
+server "https" {
+    listen on * tls port 443
+    tls {
+        certificate "/etc/ssl/mikolaj.k.vu.crt"
+        key "/etc/ssl/private/mikolaj.k.vu.key"
+    }
+    fastcgi
+    root "/cgi-bin/cgi"
+}
+#+end_src
+
+** C
+*** ~vi ~/cgi/cgi.c~ Edit your website's source code.
+#+begin_src C
+#include <err.h> /* err(3) */
+#include <stdlib.h> /* EXIT_xxxx */
+#include <stdio.h> /* puts(3) */
+#include <unistd.h> /* pledge(2) */
+int main(void)
+{
+    if (pledge("stdio", NULL) == -1)
+        err(EXIT_FAILURE, "pledge");
+    puts("Status: 200 OK\r");
+    puts("Content-Type: text/html\r");
+    puts("\r");
+    puts("<!DOCTYPE html>\n");
+    puts("<html lang='en'>\n");
+    puts("<head>\n");
+    puts("<title>BASED WEBSITE</title>\n");
+    puts("<meta charset='UTF-8'>\n");
+    puts("<meta name='viewport' content='width=device-width, initial-scale=1'>\n");
+    puts("</head>\n");
+    puts("<body>\n");
+    puts("<h1>Hello, world!</h1>\n");
+    puts("</body>\n");
+    puts("</html>\n");
+    return EXIT_SUCCESS;
+}
+#+end_src
+*** ~vi ~/cgi/cgi.sh~ Automate compiling and deploying your source code.
+#+begin_src
+#!/bin/sh
+cc -static -g -W -Wall -Wextra -o cgi cgi.c
+install -o www -g www -m 0500 cgi /var/www/cgi-bin
+#+end_src
+
+** SSL
+*** ~openssl ecparam -name secp384r1 -genkey -noout -out /etc/ssl/private/mikolaj.k.vu.key~ Generate NIST/SECG curve over a 384-bit prime field ECDSA key.
+*** ~openssl req -key /etc/ssl/private/mikolaj.k.vu.key -new -out /etc/ssl/private/mikolaj.k.vu.csr~ Generate /Certificate Signing Request/, if you want to have Certificate Authority signed certificate then give them ~/etc/ssl/private/mikolaj.k.vu.csr~ and place received certificate in ~/etc/ssl/mikolaj.k.vu.crt~, if you want to self sign your certificate (like I did) then proceed to next step.
+*** ~openssl x509 -sha256 -req -days 365 -in /etc/ssl/private/mikolaj.k.vu.csr -signkey /etc/ssl/private/mikolaj.k.vu.key -out /etc/ssl/mikolaj.k.vu.crt~ Generate self signed certificate that will expire after 365 days.
+
+** Final deploying
+*** ~sh ~/cgi/cgi.sh~ Compile and deploy your source code.
+*** ~rcctl restart httpd~ Restart httpd server to apply your configuration.
+
