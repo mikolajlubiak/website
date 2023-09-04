@@ -1,0 +1,214 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+	<title>/SIOS/</title>
+	<link>https://mikolajl.netlify.app/tags/os/</link>
+	<description>Recent content in os on /SIOS/</description>
+	<generator>Hugo -- gohugo.io</generator>
+	<language>en-us</language>
+	<lastBuildDate>Fri, 18 Nov 2022 15:00:00 +0100</lastBuildDate>
+    
+        <atom:link href="https://mikolajl.netlify.app/tags/os/index.xml" rel="self" type="application/rss+xml" />
+	
+	
+	<item>
+		<title>Operating Systems</title>
+		<link>https://mikolajl.netlify.app/os/</link>
+		<pubDate>Fri, 18 Nov 2022 15:00:00 +0100</pubDate>
+		
+		<guid>https://mikolajl.netlify.app/os/</guid>
+		<description>&lt;p&gt;&lt;em&gt;WORK IN PROGRESS&lt;/em&gt;&lt;/p&gt;
+&lt;h1 id=&#34;your-os-operating-system-is-just-like-other-programs-you-use-it-just-has-different-privileges-os-consists-of-kernel-and-userland-kernel-can-directlly-manage-your-computers-hardware-and-userland-are-basic-applications-you-need-for-system-to-do-anything-function-you-the-user-use-apps-that-talk-to-operating-system-that-talks-to-hardware&#34;&gt;Your OS (operating system) is just like other programs you use, it just has different privileges, OS consists of kernel and userland, kernel can directlly manage your computer&amp;rsquo;s hardware and userland are basic applications you need for system to do anything, function. You (the user) use apps that talk to operating system that talks to hardware.&lt;/h1&gt;
+&lt;h2 id=&#34;linux&#34;&gt;Linux&lt;/h2&gt;
+&lt;h3 id=&#34;linux-is-kernel-but-is-also-common-name-for-unix-like-operating-systems-like-gnulinux-which-uses-gnu-utilities-and-is-by-far-the-most-popular-way-of-using-linux-kernel-there-is-also-busyboxlinux-which-uses-lightweight-busybox-utils-that-are-just-single-binary-file-popular-os-designed-for-containers-called-alpine-linux-uses-busybox-and-musl-libc-in-attempt-to-be-as-minimal-as-possible-android-operating-system-is-heavily-modified-version-of-busyboxlinux-notable-linux-distributions-are&#34;&gt;Linux is kernel but is also common name for Unix-like operating systems like GNU/Linux which uses GNU utilities and is by far the most popular way of using Linux kernel, there is also busybox/Linux which uses lightweight busybox utils that are just single binary file, popular OS designed for containers called Alpine Linux uses busybox and musl libc in attempt to be as minimal as possible, Android operating system is heavily modified version of busybox/Linux. Notable Linux distributions are:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Arch Linux - GNU/Linux, independent (not based on anything), uses systemd init system but thanks to Artix Linux which is fork that makes it easier to use other init systems with Arch specific tools you can use other init systems with ease, mostly used among experienced Linux users for its KISS (Keep it simple, stupid!) principle, base install doesn&amp;rsquo;t come with DE but you can install any DE or WM (window manager) you like through its package manager called &lt;code&gt;pacman&lt;/code&gt;, AUR (Arch User Repository) or manually.&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Ubuntu - GNU/Linux, based on Debian, uses &lt;code&gt;apt&lt;/code&gt; package manager, GNOME DE (desktop enviroment), systemd init system, made by Canonical Ltd., has multiple flavors that use different DEs like KDE, LXQT, XFCE and many more.&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Linux Mint - GNU/Linux, based on Ubuntu, uses Cinamon as DE but has XFCE flavor for older machines, it&amp;rsquo;s really great way to get into Linux, it has Windows like UI and is polished to give begginners best out of the box expirience.&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Gentoo Linux - Can be made GNU/Linux, busybox/Linux or even sbase/Linux - you can use whatever userland you want, can use OpenRC, Runit or systemd - you can use whatever init system you want, you can turn Gentoo into anything you want, but it take more time than with other Linux distributions, it uses source based package manager called &lt;code&gt;portage&lt;/code&gt; meaning that the package manager asists you with getting, managing and compiling source code of packages you want to use, it doesn&amp;rsquo;t have prebuild binaries (but you can use tools like &lt;code&gt;sisyphys&lt;/code&gt; which comes with Redcore Linux to download prebuild binaries).&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;windows&#34;&gt;Windows&lt;/h2&gt;
+&lt;h3 id=&#34;windows-is-by-far-the-most-popular-desktop-operating-systems-family-the-most-iconic-versions-are&#34;&gt;Windows is by far the most popular desktop operating system&amp;rsquo;s family. The most iconic versions are:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Windows XP - known for being lightweight.&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Windows 7 - still used in many PC althogh being EOL (End Of Life), meaning it won&amp;rsquo;t receive any updates.&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Windows 10 - the most popular operating system, currently has about 71.27% market share.&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Windows 11 - the latest release of Microsoft Windows.&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+	</item>
+	
+	<item>
+		<title>BCHS: BSD, C, httpd, SQLite</title>
+		<link>https://mikolajl.netlify.app/bchs/</link>
+		<pubDate>Thu, 03 Nov 2022 15:00:00 +0100</pubDate>
+		
+		<guid>https://mikolajl.netlify.app/bchs/</guid>
+		<description>
+&lt;div id=&#34;outline-container-headline-1&#34; class=&#34;outline-2&#34;&gt;
+&lt;h2 id=&#34;headline-1&#34;&gt;
+BCHS is software stack for web development. It uses a BSD based OS (operating system) as server&amp;#39;s system, in my opinion best suited OS for servers is OpenBSD because it is designed with code correctness and proactive security in mind, it has it&amp;#39;s own software ecosystem made to work best with each other, software that we&amp;#39;ll be using is &lt;code&gt;httpd&lt;/code&gt;, &lt;code&gt;LibreSSL&lt;/code&gt; and &lt;code&gt;clang&lt;/code&gt;. &lt;code&gt;httpd&lt;/code&gt; is OpenBSD&amp;#39;s own http server, it is way more minimal than something like &lt;code&gt;nginx&lt;/code&gt; or &lt;code&gt;apache&lt;/code&gt;, it has all we need and it&amp;#39;s already there. C is the simplest programming language, basically it&amp;#39;s just portable assembly with set of development tools and libraries. We won&amp;#39;t use SQLite since we are just making simple static website.
+&lt;/h2&gt;
+&lt;div id=&#34;outline-text-headline-1&#34; class=&#34;outline-text-2&#34;&gt;
+&lt;div id=&#34;outline-container-headline-2&#34; class=&#34;outline-3&#34;&gt;
+&lt;h3 id=&#34;headline-2&#34;&gt;
+Network
+&lt;/h3&gt;
+&lt;div id=&#34;outline-text-headline-2&#34; class=&#34;outline-text-3&#34;&gt;
+&lt;div id=&#34;outline-container-headline-3&#34; class=&#34;outline-4&#34;&gt;
+&lt;h4 id=&#34;headline-3&#34;&gt;
+Open port 80 and 443 in your router.
+&lt;/h4&gt;
+&lt;/div&gt;
+&lt;div id=&#34;outline-container-headline-4&#34; class=&#34;outline-4&#34;&gt;
+&lt;h4 id=&#34;headline-4&#34;&gt;
+Enable ingoing connections on port 80 and 443 in your system (OpenBSD) firewall. It&amp;#39;s allowed by default.
+&lt;/h4&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;outline-container-headline-5&#34; class=&#34;outline-3&#34;&gt;
+&lt;h3 id=&#34;headline-5&#34;&gt;
+OpenBSD
+&lt;/h3&gt;
+&lt;div id=&#34;outline-text-headline-5&#34; class=&#34;outline-text-3&#34;&gt;
+&lt;div id=&#34;outline-container-headline-6&#34; class=&#34;outline-4&#34;&gt;
+&lt;h4 id=&#34;headline-6&#34;&gt;
+&lt;code&gt;systemctl enable httpd&lt;/code&gt; Start server on startup automatically.
+&lt;/h4&gt;
+&lt;/div&gt;
+&lt;div id=&#34;outline-container-headline-7&#34; class=&#34;outline-4&#34;&gt;
+&lt;h4 id=&#34;headline-7&#34;&gt;
+&lt;code&gt;systemctl enable slowcgi&lt;/code&gt; Start slowcgi on startup automatically.
+&lt;/h4&gt;
+&lt;/div&gt;
+&lt;div id=&#34;outline-container-headline-8&#34; class=&#34;outline-4&#34;&gt;
+&lt;h4 id=&#34;headline-8&#34;&gt;
+&lt;code&gt;systemctl start httpd&lt;/code&gt; Start server for now without need to reboot.
+&lt;/h4&gt;
+&lt;/div&gt;
+&lt;div id=&#34;outline-container-headline-9&#34; class=&#34;outline-4&#34;&gt;
+&lt;h4 id=&#34;headline-9&#34;&gt;
+&lt;code&gt;systemctl start httpd&lt;/code&gt; Start slowcgi for now without need to reboot.
+&lt;/h4&gt;
+&lt;/div&gt;
+&lt;div id=&#34;outline-container-headline-10&#34; class=&#34;outline-4&#34;&gt;
+&lt;h4 id=&#34;headline-10&#34;&gt;
+&lt;code&gt;vi /etc/httpd.conf&lt;/code&gt; Edit httpd config file.
+&lt;/h4&gt;
+&lt;div id=&#34;outline-text-headline-10&#34; class=&#34;outline-text-4&#34;&gt;
+&lt;div class=&#34;src src-text&#34;&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;server &amp;#34;http&amp;#34; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    listen on * port 80 block return 301 &amp;#34;https://$HTTP_HOST$REQUEST_URI&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;server &amp;#34;https&amp;#34; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    listen on * tls port 443
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    tls {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        certificate &amp;#34;/etc/ssl/mikolajl.netlify.app.crt&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        key &amp;#34;/etc/ssl/private/mikolajl.netlify.app.key&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    fastcgi
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    root &amp;#34;/cgi-bin/cgi&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;outline-container-headline-11&#34; class=&#34;outline-3&#34;&gt;
+&lt;h3 id=&#34;headline-11&#34;&gt;
+C
+&lt;/h3&gt;
+&lt;div id=&#34;outline-text-headline-11&#34; class=&#34;outline-text-3&#34;&gt;
+&lt;div id=&#34;outline-container-headline-12&#34; class=&#34;outline-4&#34;&gt;
+&lt;h4 id=&#34;headline-12&#34;&gt;
+&lt;code&gt;vi ~/cgi/cgi.c&lt;/code&gt; Edit your website&amp;#39;s source code.
+&lt;/h4&gt;
+&lt;div id=&#34;outline-text-headline-12&#34; class=&#34;outline-text-4&#34;&gt;
+&lt;div class=&#34;src src-c&#34;&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#include&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;err.h&amp;gt; /* err(3) */&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#include&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;stdlib.h&amp;gt; /* EXIT_xxxx */&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#include&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;stdio.h&amp;gt; /* puts(3) */&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#include&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;unistd.h&amp;gt; /* pledge(2) */&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; (&lt;span style=&#34;color:#a6e22e&#34;&gt;pledge&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;stdio&amp;#34;&lt;/span&gt;, NULL) &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#a6e22e&#34;&gt;err&lt;/span&gt;(EXIT_FAILURE, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;pledge&amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#a6e22e&#34;&gt;puts&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Status: 200 OK&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;\r&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#a6e22e&#34;&gt;puts&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Content-Type: text/html&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;\r&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#a6e22e&#34;&gt;puts&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;\r&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#a6e22e&#34;&gt;puts&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;\n&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#a6e22e&#34;&gt;puts&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;lt;html lang=&amp;#39;en&amp;#39;&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;\n&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#a6e22e&#34;&gt;puts&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;lt;head&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;\n&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#a6e22e&#34;&gt;puts&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;lt;title&amp;gt;BASED WEBSITE&amp;lt;/title&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;\n&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#a6e22e&#34;&gt;puts&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;lt;meta charset=&amp;#39;UTF-8&amp;#39;&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;\n&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#a6e22e&#34;&gt;puts&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;lt;meta name=&amp;#39;viewport&amp;#39; content=&amp;#39;width=device-width, initial-scale=1&amp;#39;&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;\n&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#a6e22e&#34;&gt;puts&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;lt;/head&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;\n&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#a6e22e&#34;&gt;puts&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;lt;body&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;\n&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#a6e22e&#34;&gt;puts&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;lt;h1&amp;gt;Hello, world!&amp;lt;/h1&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;\n&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#a6e22e&#34;&gt;puts&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;lt;/body&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;\n&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#a6e22e&#34;&gt;puts&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;lt;/html&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;\n&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; EXIT_SUCCESS;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;outline-container-headline-13&#34; class=&#34;outline-4&#34;&gt;
+&lt;h4 id=&#34;headline-13&#34;&gt;
+&lt;code&gt;vi ~/cgi/cgi.sh&lt;/code&gt; Automate compiling and deploying your source code.
+&lt;/h4&gt;
+&lt;div id=&#34;outline-text-headline-13&#34; class=&#34;outline-text-4&#34;&gt;
+&lt;div class=&#34;src src-text&#34;&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;#!/bin/sh
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cc -static -g -W -Wall -Wextra -o cgi cgi.c
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;install -o www -g www -m 0500 cgi /var/www/cgi-bin&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;outline-container-headline-14&#34; class=&#34;outline-3&#34;&gt;
+&lt;h3 id=&#34;headline-14&#34;&gt;
+SSL
+&lt;/h3&gt;
+&lt;div id=&#34;outline-text-headline-14&#34; class=&#34;outline-text-3&#34;&gt;
+&lt;div id=&#34;outline-container-headline-15&#34; class=&#34;outline-4&#34;&gt;
+&lt;h4 id=&#34;headline-15&#34;&gt;
+&lt;code&gt;openssl ecparam -name secp384r1 -genkey -noout -out /etc/ssl/private/mikolajl.netlify.app.key&lt;/code&gt; Generate NIST/SECG curve over a 384-bit prime field ECDSA key.
+&lt;/h4&gt;
+&lt;/div&gt;
+&lt;div id=&#34;outline-container-headline-16&#34; class=&#34;outline-4&#34;&gt;
+&lt;h4 id=&#34;headline-16&#34;&gt;
+&lt;code&gt;openssl req -key /etc/ssl/private/mikolajl.netlify.app.key -new -out /etc/ssl/private/mikolaj.k.vu.csr&lt;/code&gt; Generate &lt;em&gt;Certificate Signing Request&lt;/em&gt;, if you want to have Certificate Authority signed certificate then give them &lt;code&gt;/etc/ssl/private/mikolaj.k.vu.csr&lt;/code&gt; and place received certificate in &lt;code&gt;/etc/ssl/mikolaj.k.vu.crt&lt;/code&gt;, if you want to self sign your certificate (like I did) then proceed to next step.
+&lt;/h4&gt;
+&lt;/div&gt;
+&lt;div id=&#34;outline-container-headline-17&#34; class=&#34;outline-4&#34;&gt;
+&lt;h4 id=&#34;headline-17&#34;&gt;
+&lt;code&gt;openssl x509 -sha256 -req -days 365 -in /etc/ssl/private/mikolajl.netlify.app.csr -signkey /etc/ssl/private/mikolaj.k.vu.key -out /etc/ssl/mikolaj.k.vu.crt&lt;/code&gt; Generate self signed certificate that will expire after 365 days.
+&lt;/h4&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;outline-container-headline-18&#34; class=&#34;outline-3&#34;&gt;
+&lt;h3 id=&#34;headline-18&#34;&gt;
+Final deploying
+&lt;/h3&gt;
+&lt;div id=&#34;outline-text-headline-18&#34; class=&#34;outline-text-3&#34;&gt;
+&lt;div id=&#34;outline-container-headline-19&#34; class=&#34;outline-4&#34;&gt;
+&lt;h4 id=&#34;headline-19&#34;&gt;
+&lt;code&gt;sh ~/cgi/cgi.sh&lt;/code&gt; Compile and deploy your source code.
+&lt;/h4&gt;
+&lt;/div&gt;
+&lt;div id=&#34;outline-container-headline-20&#34; class=&#34;outline-4&#34;&gt;
+&lt;h4 id=&#34;headline-20&#34;&gt;
+&lt;code&gt;rcctl restart httpd&lt;/code&gt; Restart httpd server to apply your configuration.
+&lt;/h4&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+	</item>
+	
+	</channel>
+</rss>

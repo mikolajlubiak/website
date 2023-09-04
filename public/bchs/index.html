@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>BCHS: BSD, C, httpd, SQLite | /SIOS/</title>
+	<link rel="canonical" href="https://mikolajl.netlify.app">
+	<link rel='alternate' type='application/rss+xml' title="/SIOS/ RSS" href='/index.xml'>
+	<link rel='stylesheet' type='text/css' href='/style.css'>
+	<link rel="icon" href="/favicon.ico">
+	<meta name="description" content="BCHS is software stack for web development. It uses a BSD based OS (operating system) as server&#39;s system, in my opinion best suited OS for servers is OpenBSD because it is designed with code correctness and proactive security in mind, it has it&#39;s own software ecosystem made to work best with each other, software that we&#39;ll be using is httpd, LibreSSL and clang. httpd is OpenBSD&#39;s own http server, it is way more minimal than something like nginx or apache, it has all we need and it&#39;s already there.">
+	<meta name="keywords" content="openbsd, c, httpd, website, ssl">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="robots" content="index, follow">
+	<meta charset="utf-8">
+</head>
+<body>
+<main>
+<header><h1 id="tag_BCHS: BSD, C, httpd, SQLite">BCHS: BSD, C, httpd, SQLite</h1></header>
+<article>
+
+
+<div id="outline-container-headline-1" class="outline-2">
+<h2 id="headline-1">
+BCHS is software stack for web development. It uses a BSD based OS (operating system) as server&#39;s system, in my opinion best suited OS for servers is OpenBSD because it is designed with code correctness and proactive security in mind, it has it&#39;s own software ecosystem made to work best with each other, software that we&#39;ll be using is <code>httpd</code>, <code>LibreSSL</code> and <code>clang</code>. <code>httpd</code> is OpenBSD&#39;s own http server, it is way more minimal than something like <code>nginx</code> or <code>apache</code>, it has all we need and it&#39;s already there. C is the simplest programming language, basically it&#39;s just portable assembly with set of development tools and libraries. We won&#39;t use SQLite since we are just making simple static website.
+</h2>
+<div id="outline-text-headline-1" class="outline-text-2">
+<div id="outline-container-headline-2" class="outline-3">
+<h3 id="headline-2">
+Network
+</h3>
+<div id="outline-text-headline-2" class="outline-text-3">
+<div id="outline-container-headline-3" class="outline-4">
+<h4 id="headline-3">
+Open port 80 and 443 in your router.
+</h4>
+</div>
+<div id="outline-container-headline-4" class="outline-4">
+<h4 id="headline-4">
+Enable ingoing connections on port 80 and 443 in your system (OpenBSD) firewall. It&#39;s allowed by default.
+</h4>
+</div>
+</div>
+</div>
+<div id="outline-container-headline-5" class="outline-3">
+<h3 id="headline-5">
+OpenBSD
+</h3>
+<div id="outline-text-headline-5" class="outline-text-3">
+<div id="outline-container-headline-6" class="outline-4">
+<h4 id="headline-6">
+<code>systemctl enable httpd</code> Start server on startup automatically.
+</h4>
+</div>
+<div id="outline-container-headline-7" class="outline-4">
+<h4 id="headline-7">
+<code>systemctl enable slowcgi</code> Start slowcgi on startup automatically.
+</h4>
+</div>
+<div id="outline-container-headline-8" class="outline-4">
+<h4 id="headline-8">
+<code>systemctl start httpd</code> Start server for now without need to reboot.
+</h4>
+</div>
+<div id="outline-container-headline-9" class="outline-4">
+<h4 id="headline-9">
+<code>systemctl start httpd</code> Start slowcgi for now without need to reboot.
+</h4>
+</div>
+<div id="outline-container-headline-10" class="outline-4">
+<h4 id="headline-10">
+<code>vi /etc/httpd.conf</code> Edit httpd config file.
+</h4>
+<div id="outline-text-headline-10" class="outline-text-4">
+<div class="src src-text">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>server &#34;http&#34; {
+</span></span><span style="display:flex;"><span>    listen on * port 80 block return 301 &#34;https://$HTTP_HOST$REQUEST_URI&#34;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>server &#34;https&#34; {
+</span></span><span style="display:flex;"><span>    listen on * tls port 443
+</span></span><span style="display:flex;"><span>    tls {
+</span></span><span style="display:flex;"><span>        certificate &#34;/etc/ssl/mikolajl.netlify.app.crt&#34;
+</span></span><span style="display:flex;"><span>        key &#34;/etc/ssl/private/mikolajl.netlify.app.key&#34;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    fastcgi
+</span></span><span style="display:flex;"><span>    root &#34;/cgi-bin/cgi&#34;
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-headline-11" class="outline-3">
+<h3 id="headline-11">
+C
+</h3>
+<div id="outline-text-headline-11" class="outline-text-3">
+<div id="outline-container-headline-12" class="outline-4">
+<h4 id="headline-12">
+<code>vi ~/cgi/cgi.c</code> Edit your website&#39;s source code.
+</h4>
+<div id="outline-text-headline-12" class="outline-text-4">
+<div class="src src-c">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;err.h&gt; /* err(3) */</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdlib.h&gt; /* EXIT_xxxx */</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdio.h&gt; /* puts(3) */</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;unistd.h&gt; /* pledge(2) */</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>(<span style="color:#66d9ef">void</span>)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">pledge</span>(<span style="color:#e6db74">&#34;stdio&#34;</span>, NULL) <span style="color:#f92672">==</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">err</span>(EXIT_FAILURE, <span style="color:#e6db74">&#34;pledge&#34;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">puts</span>(<span style="color:#e6db74">&#34;Status: 200 OK</span><span style="color:#ae81ff">\r</span><span style="color:#e6db74">&#34;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">puts</span>(<span style="color:#e6db74">&#34;Content-Type: text/html</span><span style="color:#ae81ff">\r</span><span style="color:#e6db74">&#34;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">puts</span>(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\r</span><span style="color:#e6db74">&#34;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">puts</span>(<span style="color:#e6db74">&#34;&lt;!DOCTYPE html&gt;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">puts</span>(<span style="color:#e6db74">&#34;&lt;html lang=&#39;en&#39;&gt;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">puts</span>(<span style="color:#e6db74">&#34;&lt;head&gt;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">puts</span>(<span style="color:#e6db74">&#34;&lt;title&gt;BASED WEBSITE&lt;/title&gt;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">puts</span>(<span style="color:#e6db74">&#34;&lt;meta charset=&#39;UTF-8&#39;&gt;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">puts</span>(<span style="color:#e6db74">&#34;&lt;meta name=&#39;viewport&#39; content=&#39;width=device-width, initial-scale=1&#39;&gt;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">puts</span>(<span style="color:#e6db74">&#34;&lt;/head&gt;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">puts</span>(<span style="color:#e6db74">&#34;&lt;body&gt;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">puts</span>(<span style="color:#e6db74">&#34;&lt;h1&gt;Hello, world!&lt;/h1&gt;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">puts</span>(<span style="color:#e6db74">&#34;&lt;/body&gt;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">puts</span>(<span style="color:#e6db74">&#34;&lt;/html&gt;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> EXIT_SUCCESS;
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
+</div>
+</div>
+</div>
+<div id="outline-container-headline-13" class="outline-4">
+<h4 id="headline-13">
+<code>vi ~/cgi/cgi.sh</code> Automate compiling and deploying your source code.
+</h4>
+<div id="outline-text-headline-13" class="outline-text-4">
+<div class="src src-text">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>#!/bin/sh
+</span></span><span style="display:flex;"><span>cc -static -g -W -Wall -Wextra -o cgi cgi.c
+</span></span><span style="display:flex;"><span>install -o www -g www -m 0500 cgi /var/www/cgi-bin</span></span></code></pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-headline-14" class="outline-3">
+<h3 id="headline-14">
+SSL
+</h3>
+<div id="outline-text-headline-14" class="outline-text-3">
+<div id="outline-container-headline-15" class="outline-4">
+<h4 id="headline-15">
+<code>openssl ecparam -name secp384r1 -genkey -noout -out /etc/ssl/private/mikolajl.netlify.app.key</code> Generate NIST/SECG curve over a 384-bit prime field ECDSA key.
+</h4>
+</div>
+<div id="outline-container-headline-16" class="outline-4">
+<h4 id="headline-16">
+<code>openssl req -key /etc/ssl/private/mikolajl.netlify.app.key -new -out /etc/ssl/private/mikolaj.k.vu.csr</code> Generate <em>Certificate Signing Request</em>, if you want to have Certificate Authority signed certificate then give them <code>/etc/ssl/private/mikolaj.k.vu.csr</code> and place received certificate in <code>/etc/ssl/mikolaj.k.vu.crt</code>, if you want to self sign your certificate (like I did) then proceed to next step.
+</h4>
+</div>
+<div id="outline-container-headline-17" class="outline-4">
+<h4 id="headline-17">
+<code>openssl x509 -sha256 -req -days 365 -in /etc/ssl/private/mikolajl.netlify.app.csr -signkey /etc/ssl/private/mikolaj.k.vu.key -out /etc/ssl/mikolaj.k.vu.crt</code> Generate self signed certificate that will expire after 365 days.
+</h4>
+</div>
+</div>
+</div>
+<div id="outline-container-headline-18" class="outline-3">
+<h3 id="headline-18">
+Final deploying
+</h3>
+<div id="outline-text-headline-18" class="outline-text-3">
+<div id="outline-container-headline-19" class="outline-4">
+<h4 id="headline-19">
+<code>sh ~/cgi/cgi.sh</code> Compile and deploy your source code.
+</h4>
+</div>
+<div id="outline-container-headline-20" class="outline-4">
+<h4 id="headline-20">
+<code>rcctl restart httpd</code> Restart httpd server to apply your configuration.
+</h4>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+<div id="nextprev"><a href="/os/"><div id="nextart">Next:<br>Operating Systems</div></a>
+</div>
+<div style="clear:both" class=taglist>Related<br><a id="tag_openbsd" href="https://mikolajl.netlify.app/tags/openbsd">openbsd</a> &middot; <a id="tag_c" href="https://mikolajl.netlify.app/tags/c">c</a> &middot; <a id="tag_httpd" href="https://mikolajl.netlify.app/tags/httpd">httpd</a> &middot; <a id="tag_website" href="https://mikolajl.netlify.app/tags/website">website</a> &middot; <a id="tag_ssl" href="https://mikolajl.netlify.app/tags/ssl">ssl</a></div>
+</article>
+</main>
+
+<footer>
+	<br><a href="/index.xml"><img src="/rss.svg" style="max-height:1.5em" alt="RSS Feed" title="Subscribe via RSS for updates."></a>
+	<a href="mailto:funtoomen@disroot.org"><h4>funtoomen@disroot.org</h4></a>
+</footer>
+
+</body>
+</html>
