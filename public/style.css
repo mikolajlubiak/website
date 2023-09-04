@@ -1,22 +1,7 @@
 body {
 	font-family: sans-serif ;
-	background: #111 ;
-	color: #aaa ;
-}
-
-a {
-	color: #eee ;
-	text-decoration-line: none ;
-}
-
-a:hover {
-	text-decoration-line: underline ;
-	text-decoration-color: purple ;
-	animation: cc 1s ;
-}
-
-@keyframes cc {
-	from {text-decoration-color: #eee} ;
+	background: #110000 ;
+	color: #ccc ;
 }
 
 main {
