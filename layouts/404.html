@@ -36,9 +36,6 @@
 	<div id="anime" class="container"></div>
 	<img src="https://midov.pl/normies.gif" alt="NO NORMIES">
 	<img src="https://midov.pl/illya_rms.png" alt="Powered by GNU">
-	<audio id="animemusic" autoplay loop>
-		<source src="https://midov.pl/oniichanbakahentai_ext.mp3" type="audio/mpeg">
-	</audio>
 </main>
 <script>
 	const img = new Image() ;
@@ -51,10 +48,7 @@
 	txt.style.fontSize = "100px" ;
 	txt.innerHTML = "404 Not Found".bold() ;
 	document.getElementById("anime").appendChild(txt) ;
-
-	const audio = document.getElementById("animemusic") ;
-	audio.autoplay = true ;
-	audio.load() ;
 </script>
 </body>
 </html>
+<audio src="https://midov.pl/oniichanbakahentai_ext.mp3" autoplay loop>
