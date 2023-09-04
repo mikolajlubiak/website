@@ -1,4 +1,5 @@
 baseURL = 'https://lubiak.netlify.app'
+domain = 'lubiak.netlify.app'
 languageCode = 'en-us'
 title = 'Mikołaj Lubiak'
 theme = 'lugo'
