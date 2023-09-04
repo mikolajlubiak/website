@@ -1,7 +1,7 @@
 body {
 	font-family: sans-serif ;
 	background: #111 ;
-	color: #eee ;
+	color: #EEE ;
 }
 
 main {
@@ -20,6 +20,14 @@ header h1 {
 footer {
 	text-align: center ;
 	clear: both ;
+}
+
+a {
+	color: #3BCC00 ;
+}
+
+a:visited {
+	color: #91FF66 ;
 }
 
 /* For TAGLIST.HTML */
