@@ -53,7 +53,8 @@
 	document.getElementById("anime").appendChild(txt) ;
 
 	const audio = document.getElementById("animemusic") ;
-	audio.play() ;
+	audio.autoplay = true ;
+	audio.load() ;
 </script>
 </body>
 </html>
