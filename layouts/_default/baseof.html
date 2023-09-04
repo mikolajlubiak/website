@@ -1,45 +1,48 @@
 <!DOCTYPE html>
 <html lang="{{ .Site.Language }}">
-<head>
-	<title>{{ if not .IsHome }}{{ .Title | title }} | {{ end }}{{ .Site.Title }}</title>
-	<link rel="canonical" href="{{ .Site.BaseURL }}">
-	<link rel='alternate' type='application/rss+xml' title="{{ .Site.Title }} RSS" href='/index.xml'>
-	<link rel='stylesheet' type='text/css' href='/style.css'>
-	<link rel="icon" type="image/png" href='/favicon.png' />
-	{{ with .Site.Params.favicon }}<link rel="icon" href="{{ . }}">
-	{{ end -}}
-	<meta name="description" content="{{ with .Params.description }}{{ . }}{{ else }}{{ .Summary }}{{ end }}">
-	{{ if isset .Params "tags" }}<meta name="keywords" content="{{ with .Params.tags }}{{ delimit . ", " }}{{ end }}">
-	{{ end -}}
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="robots" content="index, follow">
-	<meta charset="utf-8">
-</head>
-<body>
-{{ if .Site.Menus.main }}{{ partial "nav.html" . }}{{ end -}}
-<main>
-<header><h1 id="tag_{{ .Title }}">{{ block "title" . }}{{ end }}</h1></header>
-<article>
-{{ block "main" . }}
-{{ .Content }}
-{{ end }}
-{{ if .Param "nextprev" }}{{ partial "nextprev.html" . -}}{{ end -}}
-{{ if .Param "taglist" }}{{ partial "taglist.html" . }}{{ end -}}
-</article>
-</main>
-{{ block "footer" . }}
-<footer>
-	<a href="{{ .Site.BaseURL }}">{{ .Site.BaseURL }}</a>
-	<a href="mailto:lubiak@proton.me">lubiak@proton.me</a>
-	{{- if .Param "showrss" }}&nbsp;&nbsp;<a href="/index.xml"><img src="/rss.svg" style="max-height:1.5em" alt="RSS Feed" title="Subscribe via RSS for updates."></a>{{ end }}
-	 <p>
-		 <a href="https://www.invidious.tiekoetter.com/watch?v=-MkRuV0aCcI" target="_b"><img src="https://9front.org/img/nonazis.png" height="36" border="0"></a>
-		 <a href="https://blacklivesmatter.com" target="_b"><img src="https://9front.org/img/blm-b.png" height="36" border="0"></a>
-		 <a href="https://amazon.com/s?k=From+the+Don+to+the+Dnepr%3A+Soviet+Offensive+Operations%2C+December+1942+-+August+1943&page=1&s=&tld=com" target="_b"><img src="https://9front.org/img/usa-ukraine.png" height="36" border="0"></a>
-		 <a href="https://www.plannedparenthood.org" target="_b"><img src="https://9front.org/img/abort.png" border="0"></a>
-	 </p>
+	<head>
+		<title>{{ if not .IsHome }}{{ .Title | title }} | {{ end }}{{ .Site.Title }}</title>
+		<link rel="canonical" href="{{ .Site.BaseURL }}">
+		<link rel='alternate' type='application/rss+xml' title="{{ .Site.Title }} RSS" href='/index.xml'>
+		<link rel='stylesheet' type='text/css' href='/style.css'>
+		<link rel="icon" type="image/png" href='/favicon.png' />
+		{{ with .Site.Params.favicon }}<link rel="icon" href="{{ . }}">
+		{{ end -}}
+		<meta name="description" content="{{ with .Params.description }}{{ . }}{{ else }}{{ .Summary }}{{ end }}">
+		{{ if isset .Params "tags" }}<meta name="keywords" content="{{ with .Params.tags }}{{ delimit . ", " }}{{ end }}">
+		{{ end -}}
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="robots" content="index, follow">
+		<meta charset="utf-8">
+	</head>
+	<body>
+		{{ if .Site.Menus.main }}{{ partial "nav.html" . }}{{ end -}}
+		<main>
+			<header><h1 id="tag_{{ .Title }}">{{ block "title" . }}{{ end }}</h1></header>
+			<article>
+				{{ block "main" . }}
+				{{ .Content }}
+				{{ end }}
+				{{ if .Param "nextprev" }}{{ partial "nextprev.html" . -}}{{ end -}}
+				{{ if .Param "taglist" }}{{ partial "taglist.html" . }}{{ end -}}
+			</article>
+		</main>
+		{{ block "footer" . }}
+		<footer>
+			<a href="{{ .Site.BaseURL }}">{{ .Site.BaseURL }}</a>
+			<a href="mailto:lubiak@proton.me">lubiak@proton.me</a>
+			<a href="/resume.pdf">Resume</a>
+			{{- if .Param "showrss" }}
+			&nbsp;<a href="/index.xml"><img src="/rss.svg" style="max-height:1.5em" alt="RSS Feed" title="Subscribe via RSS for updates."></a>
+			{{ end }}
+			<p>
+			<a href="https://www.invidious.tiekoetter.com/watch?v=-MkRuV0aCcI" target="_b"><img src="https://9front.org/img/nonazis.png" height="36" border="0"></a>
+			<a href="https://blacklivesmatter.com" target="_b"><img src="https://9front.org/img/blm-b.png" height="36" border="0"></a>
+			<a href="https://amazon.com/s?k=From+the+Don+to+the+Dnepr%3A+Soviet+Offensive+Operations%2C+December+1942+-+August+1943&page=1&s=&tld=com" target="_b"><img src="https://9front.org/img/usa-ukraine.png" height="36" border="0"></a>
+			<a href="https://www.plannedparenthood.org" target="_b"><img src="https://9front.org/img/abort.png" border="0"></a>
+			</p>
 
-</footer>
-{{ end }}
-</body>
+		</footer>
+		{{ end }}
+	</body>
 </html>
