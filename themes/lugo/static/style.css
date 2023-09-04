@@ -1,7 +1,7 @@
 body {
 	font-family: sans-serif ;
-	background: #1a1b1e ;
-	color: #ffffff ;
+	background: #110000 ;
+	color: #ccc ;
 }
 
 main {
@@ -21,15 +21,6 @@ footer {
 	text-align: center ;
 	clear: both ;
 }
-
-a {
-	color: #0066cc ;
-}
-
-a:hover {
-	color: #1177dd ;
-}
-
 
 /* For TAGLIST.HTML */
 .taglist {
