@@ -1,4 +1,4 @@
 baseURL = 'https://lubiak.netlify.app'
 languageCode = 'en-us'
-title = '/SIOS/'
+title = 'Mikołaj Lubiak'
 theme = 'lugo'
