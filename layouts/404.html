@@ -34,7 +34,10 @@
 	</style>
 	<script>
 		var root = document.querySelector(':root');
+		var rootStyles = getComputedStyle(root);
+		var bgimg = rootStyles.getPropertyValue('--bgimg');
 		root.style.setProperty('--bgimg', "https://thisanimedoesnotexist.ai/results/psi-2.0/seed" + String(Math.floor(Math.random() * 100000)).padStart(5, '0') + ".png" );
+		console.log(bgimg);
 	</script>
 </head>
 <body>
