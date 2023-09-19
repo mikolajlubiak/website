@@ -10,7 +10,7 @@ title: "About"
 
 - 📝 I'm currently doing commissions for [Sealcode](https://www.sealcode.it/) and [Go2Ops](https://go2ops.com/).
 
-- 🖥 I have experience with this OS families:
+- 🖥 I have experience with these OS families:
 	- Linux
 	- \*BSD
 
