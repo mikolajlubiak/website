@@ -29,7 +29,7 @@ title: "About"
 	- Nasm
 	- Fasm
 
-- Some of my bigger projects in:
+- 🗃️ Some of my bigger projects in:
 	- Python:
 		- https://codeberg.org/mikolajlubiak/motey
 		- https://codeberg.org/mikolajlubiak/ttg
