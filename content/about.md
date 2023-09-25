@@ -50,7 +50,7 @@ title: "About"
 - 🎉 Fun facts: I'm interested in conlangs, I know Esperanto. [I'm not that bad at chess.♟️](https://lichess.org/@/funtoomen) I can solve Rubik's cube quite fast.
 
 I've been using Linux for about 5 years as a daily driver and on several servers. I was using OpenBSD as a daily driver and on my NAS for about 2 years.
-I'm interested in cybersecurity and cryptology. I managed to take full control of the NeuroN Foundation's servers: https://web.archive.org/web/20230902084403/http://neuronfoundation.com/
+I'm interested in cybersecurity and cryptology. I managed to take full control of the NeuroN Foundation's servers: https://web.archive.org/web/20230902084403/http://neuronfoundation.com/ .
 So I have programming skills as well as Unix-like systems administration and cybersecurity skills.
 
 {{< img src="https://github-readme-stats.vercel.app/api/top-langs?username=mikolajlubiak&show_icons=true&locale=en&layout=compact" alt="My Github stats" >}}
