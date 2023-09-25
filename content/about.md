@@ -19,7 +19,7 @@ title: "About"
 	- C++
 	- Go
 
-- Although, following Gynvael Coldwind's advice, I wrote some hello world programs, HTTP servers, or games in many other languages, including:
+- 🦀 Following Gynvael Coldwind's advice, I wrote some hello world programs like HTTP servers, or games in many other languages, including:
 	- Lua
 	- PHP
 	- Shell
@@ -43,14 +43,14 @@ title: "About"
 
 - 📰 I write articles on [my website](https://lubiak.pages.dev/) when I have something interesting to say.
 
-- 📬 You can get in contact with me by [email](mailto:lubiak@proton.me) ([GPG](https://keys.openpgp.org/search?q=lubiak%40proton.me)) or [Matrix protocol](https://matrix.to/#/@galanonim:matrix.org).
+- 📬 You can get in contact with me by [email](mailto:lubiak@proton.me) ([PGP key](https://keys.openpgp.org/search?q=lubiak%40proton.me)) or [Matrix protocol](https://matrix.to/#/@galanonim:matrix.org).
 
 - 📄 If you consider hiring me, here is my [resume](https://lubiak.pages.dev/resume.pdf).
 
-- 🎉 Fun facts: I'm interested in conlangs💬, I know Esperanto💚. [I'm not that bad at chess.♟️](https://lichess.org/@/funtoomen) I can solve Rubik's cube quite fast.
+- 🎉 Fun facts: I'm interested in conlangs, I know Esperanto. [I'm not that bad at chess.♟️](https://lichess.org/@/funtoomen) I can solve Rubik's cube quite fast.
 
-I've been using Linux for about 5 years as a daily driver and on several servers. I also used \*BSD as a daily driver and on my NAS for 2 years.
-I am also interested in cybersecurity and cryptology. I managed to take control of the NeuroN Foundation servers: https://web.archive.org/web/20230902084403/http://neuronfoundation.com/
-So I have programming skills as well as quasi-sysadmin and quasi-pentester skills.
+I've been using Linux for about 5 years as a daily driver and on several servers. I was using OpenBSD as a daily driver and on my NAS for about 2 years.
+I'm interested in cybersecurity and cryptology. I managed to take full control of the NeuroN Foundation's servers: https://web.archive.org/web/20230902084403/http://neuronfoundation.com/
+So I have programming skills as well as Unix-like systems administration and cybersecurity skills.
 
 {{< img src="https://github-readme-stats.vercel.app/api/top-langs?username=mikolajlubiak&show_icons=true&locale=en&layout=compact" alt="My Github stats" >}}
