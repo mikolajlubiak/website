@@ -31,13 +31,13 @@ title: "About"
 
 - 🗃️ Some of my bigger projects in:
 	- Python:
-		- https://codeberg.org/mikolajlubiak/motey
-		- https://codeberg.org/mikolajlubiak/ttg
+		- https://github.com/mikolajlubiak/motey
+		- https://github.com/mikolajlubiak/ttg
 	- C++:
-		- https://codeberg.org/mikolajlubiak/vectng
+		- https://github.com/mikolajlubiak/vectng
 	- Golang:
-		- https://codeberg.org/mikolajlubiak/nofiles
-		- https://codeberg.org/mikolajlubiak/xmrminer
+		- https://github.com/mikolajlubiak/nofiles
+		- https://github.com/mikolajlubiak/xmrminer
 
 - 🗄 All of my projects are available at [GitHub](https://github.com/mikolajlubiak) or [Codeberg](https://codeberg.org/mikolajlubiak).
 
