@@ -6,7 +6,7 @@ title: "About"
 
 ### Backend developer interested in cryptology🔑, system administration💻, cybersecurity🛡 and open source🄯.
 
-- 🧑‍💻️ I'm currently working at [Sealcode](https://www.sealcode.it/) doing tasks, at [Go2Ops](https://go2ops.com/) working on [Timoni](https://timoni.io/) and at the [NeuroN Foundation](https://neuronfoundation.com/), which [I hacked](https://web.archive.org/web/20230902084403/http://neuronfoundation.com/), as the lead developer and the only backend developer and sysadmin at [Lesson4Future](https://app.lesson4future.com/).
+- 🧑‍💻️ I'm currently working at [Sealcode](https://www.sealcode.it/) as a open source contributor, at [Go2Ops](https://go2ops.com/) working on [Timoni](https://timoni.io/) and at [NeuroN Foundation](https://neuronfoundation.com/), which [I hacked](https://web.archive.org/web/20230902084403/http://neuronfoundation.com/), as backend developer and sysadmin at [Lesson4Future](https://app.lesson4future.com/).
 
 - 🖥 I have experience with these OS families:
 	- Linux
