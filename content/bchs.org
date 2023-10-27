@@ -4,18 +4,18 @@ date: 2022-11-03T15:00:00+01:00
 tags: ['openbsd','c','httpd','website','tls','bchs','ssl-certificate','networking','cgi']
 ---
 
-* BCHS is a software stack for web development. It uses a BSD based OS (operating system) as the server's system, in my opinion the best suited OS for servers is OpenBSD because it is designed with code correctness and proactive security in mind, it has it's own software ecosystem made to work best together, software we will be using is httpd, LibreSSL and clang. httpd is OpenBSD's own http server, it is much more minimal than something like nginx or apache, it has everything we need and it's already there. C is the simplest programming language, it's basically just a portable assembly with a set of development tools and libraries. We won't be using SQLite as we're just making a simple static website.
+** BCHS is a software stack for web development. It uses a BSD based OS (operating system) as the server's system, in my opinion the best suited OS for servers is OpenBSD because it is designed with code correctness and proactive security in mind, it has it's own software ecosystem made to work best together, software we will be using is httpd, LibreSSL and clang. httpd is OpenBSD's own http server, it is much more minimal than something like nginx or apache, it has everything we need and it's already there. C is the simplest programming language, it's basically just a portable assembly with a set of development tools and libraries. We won't be using SQLite as we're just making a simple static website.
 
 ** Network
-*** Open ports 80 and 443 on your router.
-*** Enable incoming connections on ports 80 and 443 in your system (OpenBSD) firewall. It's allowed by default.
+1. Open ports 80 and 443 on your router.
+2. Enable incoming connections on ports 80 and 443 in your system (OpenBSD) firewall. It's allowed by default.
 
 ** OpenBSD
-*** ~systemctl enable httpd~ Start the server on startup automatically.
-*** ~systemctl enable slowcgi~ Start the slowcgi on startup automatically.
-*** ~systemctl start httpd~ Start server for now without the need to reboot.
-*** ~systemctl start httpd~ Start slowcgi for now without the need to reboot.
-*** ~vi /etc/httpd.conf~ Edit httpd config file.
+1. ~systemctl enable httpd~ Start the server on startup automatically.
+2. ~systemctl enable slowcgi~ Start the slowcgi on startup automatically.
+3. ~systemctl start httpd~ Start server for now without the need to reboot.
+3. ~systemctl start httpd~ Start slowcgi for now without the need to reboot.
+4. ~vi /etc/httpd.conf~ Edit httpd config file.
 #+begin_src
 server "http" {
     listen on * port 80 block return 301 "https://$HTTP_HOST$REQUEST_URI"
@@ -32,8 +32,8 @@ server "https" {
 #+end_src
 
 ** C
-*** ~vi ~/cgi/cgi.c~ Edit the source code of your website.
-#+begin_src C
+1. ~vi ~/cgi/cgi.c~ Edit the source code of your website.
+#+begin_src c
 #include <err.h> /* err(3) */
 #include <stdlib.h> /* EXIT_xxxx */
 #include <stdio.h> /* puts(3) */
@@ -59,7 +59,7 @@ int main(void)
     return EXIT_SUCCESS;
 }
 #+end_src
-*** ~vi ~/cgi/cgi.sh~ Automate the compilation and deployment of your source code.
+2. ~vi ~/cgi/cgi.sh~ Automate the compilation and deployment of your source code.
 #+begin_src
 #!/bin/sh
 cc -static -g -W -Wall -Wextra -o cgi cgi.c
@@ -67,10 +67,11 @@ install -o www -g www -m 0500 cgi /var/www/cgi-bin
 #+end_src
 
 ** TLS
-*** ~openssl ecparam -name secp384r1 -genkey -noout -out /etc/ssl/private/lubiak.k.vu.key~ Generate a NIST/SECG curve over a 384-bit prime field ECDSA key.
-*** ~openssl req -key /etc/ssl/private/lubiak.k.vu.key -new -out /etc/ssl/private/lubiak.k.vu.csr~ Generate /Certificate Signing Request/, if you want to have a certificate signed by a Certificate Authority then give them ~/etc/ssl/private/lubiak.k.vu.csr~ and place the received certificate in ~/etc/ssl/lubiak.k.vu.crt~, if you want to sign your certificate yourself (like I did) then go to the next step.
-*** ~openssl x509 -sha256 -req -days 365 -in /etc/ssl/private/lubiak.k.vu.csr -signkey /etc/ssl/private/lubiak.k.vu.key -out /etc/ssl/lubiak.k.vu.crt~ Generate a self-signed certificate that expires after 365 days.
+1. ~openssl ecparam -name secp384r1 -genkey -noout -out /etc/ssl/private/lubiak.k.vu.key~ Generate a NIST/SECG curve over a 384-bit prime field ECDSA key.
+2. ~openssl req -key /etc/ssl/private/lubiak.k.vu.key -new -out /etc/ssl/private/lubiak.k.vu.csr~ Generate /Certificate Signing Request/, if you want to have a certificate signed by a Certificate Authority then give them ~/etc/ssl/private/lubiak.k.vu.csr~ and place the received certificate in ~/etc/ssl/lubiak.k.vu.crt~, if you want to sign your certificate yourself (like I did) then go to the next step.
+3. ~openssl x509 -sha256 -req -days 365 -in /etc/ssl/private/lubiak.k.vu.csr -signkey /etc/ssl/private/lubiak.k.vu.key -out /etc/ssl/lubiak.k.vu.crt~ Generate a self-signed certificate that expires after 365 days.
 
 ** Final deploying
-*** ~sh ~/cgi/cgi.sh~ Compile and deploy your source code.
-*** ~rcctl restart httpd~ Restart the httpd server to apply your configuration.
+1. ~sh ~/cgi/cgi.sh~ Compile and deploy your source code.
+2. ~rcctl restart httpd~ Restart the httpd server to apply your configuration.
+
