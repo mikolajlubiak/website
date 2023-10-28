@@ -1,7 +1,7 @@
 lubiak.k.vu {
 	encode zstd gzip
 	file_server
-	root * /mnt/HDD/git/website/public
+	root * /home/anon/website/public
 	header {
 		# disable FLoC tracking
 		Permissions-Policy interest-cohort=()
@@ -17,5 +17,7 @@ lubiak.k.vu {
 
 		# keep referrer data off of HTTP connections
 		Referrer-Policy no-referrer-when-downgrade
+
+		Onion-Location http://qkxiyjc7smqhugxonenoi4ug3p35wotqzkxddhatpogytjrlukcaspqd.onion{path}
 	}
 }
