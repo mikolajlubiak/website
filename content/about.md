@@ -2,32 +2,22 @@
 title: "About"
 ---
 
-# Hi 👋, I'm Mikołaj
+# Hi, I'm Mikołaj
 
 ### Backend developer interested in cryptology, system administration, cybersecurity and open source.
 
-- 🧑‍💻️ I'm currently working at [Sealcode](https://www.sealcode.it/) as a open source contributor, at [Go2Ops](https://go2ops.com/) working on [Timoni](https://timoni.io/) and at [NeuroN Foundation](https://neuronfoundation.com/), which [I hacked](https://web.archive.org/web/20230902084403/http://neuronfoundation.com/), as backend developer and sysadmin at [Lesson4Future](https://lesson4future.com/).
+- I'm currently working at [Sealcode](https://www.sealcode.it/) as a open source contributor, at [Go2Ops](https://go2ops.com/) working on [Timoni](https://timoni.io/) and at [NeuroN Foundation](https://neuronfoundation.com/), which [I hacked](https://web.archive.org/web/20230902084403/http://neuronfoundation.com/), as backend developer and sysadmin at [Lesson4Future](https://lesson4future.com/).
 
-- 🖥 I have experience with these OS families:
+- I have experience with these OS families:
 	- Linux
 	- \*BSD
 
-- 🐍 My main programming languages are:
+- My main programming languages are:
 	- Python
 	- C++
 	- Go
 
-- 🦀 Following Gynvael Coldwind's advice, I wrote some hello world programs like HTTP servers, or games in many other languages, including:
-	- Lua
-	- PHP
-	- Shell
-	- Rust
-	- Zig
-	- Nim
-	- Nasm
-	- Fasm
-
-- 🗃️ Some of my bigger projects in:
+- Some of my bigger projects in:
 	- Python:
 		- https://github.com/mikolajlubiak/motey
 		- https://github.com/mikolajlubiak/ttg
@@ -38,18 +28,17 @@ title: "About"
 		- https://github.com/mikolajlubiak/nofiles
 		- https://github.com/mikolajlubiak/xmrminer
 
-- 🗄 All of my projects are available at [GitHub](https://github.com/mikolajlubiak) or [Codeberg](https://codeberg.org/mikolajlubiak).
+- Following Gynvael Coldwind's advice, I wrote some hello world programs like HTTP servers, or games in many other languages, including: Lua, PHP, Shell, Rust, Nim, Nasm.
 
-- 📰 I write articles on [my website](https://lubiak.pages.dev/) when I have something interesting to say.
+- All of my projects are available at [GitHub](https://github.com/mikolajlubiak) or [Codeberg](https://codeberg.org/mikolajlubiak).
 
-- 📬 You can get in contact with me by [email](mailto:lubiak@proton.me) ([PGP key](https://keys.openpgp.org/search?q=lubiak%40proton.me)) or [Matrix protocol](https://matrix.to/#/@galanonim:matrix.org).
+- I write articles on [my website](https://lubiak.pages.dev/) when I have something interesting to say.
 
-- 📄 If you consider hiring me, here is my [resume](https://lubiak.pages.dev/resume.pdf).
+- You can get in contact with me by [email](mailto:lubiak@proton.me) ([PGP key](https://keys.openpgp.org/search?q=lubiak%40proton.me)) or [Matrix protocol](https://matrix.to/#/@galanonim:matrix.org).
 
-- 🎉 Fun facts: I'm interested in conlangs, I know Esperanto. [I'm not that bad at chess.](https://lichess.org/@/funtoomen) I can solve Rubik's cube quite fast.
+- If you consider hiring me, here is my [resume](https://lubiak.pages.dev/resume.pdf).
 
-I've been using Linux for about 5 years as a daily driver and on several servers. I was using OpenBSD as a daily driver and on my NAS for about 2 years.
-I'm interested in cybersecurity and cryptology. I managed to take full control of the NeuroN Foundation's servers: https://web.archive.org/web/20230902084403/http://neuronfoundation.com/ .
-So I have programming skills as well as Unix-like systems administration and cybersecurity skills.
+- Fun facts: I'm interested in conlangs, I know Esperanto. [I'm not that bad at chess.](https://lichess.org/@/funtoomen) I can solve Rubik's cube quite fast.
 
-{{< img src="https://github-readme-stats.vercel.app/api/top-langs?username=mikolajlubiak&show_icons=true&locale=en&layout=compact" alt="My Github stats" >}}
+- I've been using Linux for about 5 years as a daily driver and on several servers. I was using OpenBSD as a daily driver and on my NAS for about 2 years.
+- I'm interested in cybersecurity and cryptology. I managed to take full control of the NeuroN Foundation's servers: https://web.archive.org/web/20230902084403/http://neuronfoundation.com/.
