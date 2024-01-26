@@ -6,7 +6,10 @@ title: "About"
 
 ### Backend developer interested in cryptology, system administration, cybersecurity and open source.
 
-- I'm currently working at [Sealcode](https://www.sealcode.it/) as a open source contributor, at [Go2Ops](https://go2ops.com/) working on [Timoni](https://timoni.io/) and at [NeuroN Foundation](https://neuronfoundation.com/), which [I hacked](https://web.archive.org/web/20230902084403/http://neuronfoundation.com/), as backend developer and sysadmin at [Lesson4Future](https://lesson4future.com/).
+- I'm currently working at:
+    - [Sealcode](https://www.sealcode.it/) as a open source contributor, I contributed to [Organic Maps](https://organicmaps.app/).
+    - [Go2Ops](https://go2ops.com/) working on [Timoni](https://timoni.io/) and helping [Polskie Koleje Państwowe](https://www.pkp.pl/) transition from one database system to another.
+    - [NeuroN Foundation](https://neuronfoundation.com/), which [I hacked](https://web.archive.org/web/20230902084403/http://neuronfoundation.com/), as backend developer and sysadmin at [Lesson4Future](https://lesson4future.com/) which is [Narodowy Bank Polski](https://nbp.pl/) project.
 
 - I have experience with these OS families:
 	- Linux
