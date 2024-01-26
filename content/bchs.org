@@ -4,7 +4,7 @@ date: 2022-11-03T15:00:00+01:00
 tags: ['openbsd','c','httpd','website','tls','bchs','ssl-certificate','networking','cgi']
 ---
 
-** BCHS is a software stack for web development. It uses a BSD based OS (operating system) as the server's system, in my opinion the best suited OS for servers is OpenBSD because it is designed with code correctness and proactive security in mind, it has it's own software ecosystem made to work best together, software we will be using is httpd, LibreSSL and clang. httpd is OpenBSD's own http server, it is much more minimal than something like nginx or apache, it has everything we need and it's already there. C is the simplest programming language, it's basically just a portable assembly with a set of development tools and libraries. We won't be using SQLite as we're just making a simple static website.
+BCHS is a software stack for web development. It uses a BSD based OS (operating system) as the server's system, in my opinion the best suited OS for servers is OpenBSD because it is designed with code correctness and proactive security in mind, it has it's own software ecosystem made to work best together, software we will be using is httpd, LibreSSL and clang. httpd is OpenBSD's own http server, it is much more minimal than something like nginx or apache, it has everything we need and it's already there. C is the simplest programming language, it's basically just a portable assembly with a set of development tools and libraries. We won't be using SQLite as we're just making a simple static website.
 
 ** Network
 1. Open ports 80 and 443 on your router.
