@@ -6,7 +6,7 @@ tags: ['os','userland','kernel','linux','windows','arch-linux','linux-mint','ubu
 
 *WORK IN PROGRESS*
 
-# Your OS (operating system) is just like other programs you use, it just has different privileges, OS consists of kernel and userland, kernel can directly manage your computer's hardware and userland are basic applications you need for system to do anything, function. You (the user) use applications that talk to the operating system, which talks to the hardware.
+Your OS (operating system) is just like other programs you use, it just has different privileges, OS consists of kernel and userland, kernel can directly manage your computer's hardware and userland are basic applications you need for system to do anything, function. You (the user) use applications that talk to the operating system, which talks to the hardware.
 
 ## Linux
 ### Linux is kernel but is also common name for Unix-like operating systems such as GNU/Linux which uses GNU utilities and is by far the most popular way of using Linux kernel, there is also busybox/Linux which uses lightweight busybox utils which are just a single binary file, popular OS designed for containers called Alpine Linux uses busybox and musl libc in an attempt to be as minimal as possible, Android operating system is heavily modified version of busybox/Linux. Notable Linux distributions are:
