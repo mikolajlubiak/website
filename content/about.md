@@ -27,7 +27,7 @@ title: "About"
 	- C++:
 		- https://github.com/mikolajlubiak/vectng
 		- https://github.com/mikolajlubiak/vulkan
-	- Golang:
+	- Go:
 		- https://github.com/mikolajlubiak/nofiles
 		- https://github.com/mikolajlubiak/xmrminer
 
