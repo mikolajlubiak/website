@@ -30,7 +30,6 @@ title: "About"
 		- https://github.com/mikolajlubiak/vulkan
 	- Go:
 		- https://github.com/mikolajlubiak/nofiles
-		- https://github.com/mikolajlubiak/xmrminer
 
 - Following Gynvael Coldwind's advice, I wrote some hello world programs like HTTP servers, or games in many other languages, including: Lua, PHP, Shell, Rust, Nim, Nasm.
 
