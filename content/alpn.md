@@ -16,8 +16,7 @@ There is nothing difficult in forwarding some ports, **but** often your ISP will
 So... maybe let's try a different challenge. How about [*DNS-01 challenge*](https://letsencrypt.org/docs/challenge-types/#dns-01-challenge)?
 This, on the other hand, requires that you can set CNAME records in your domain, which again might be blocked (or at least it was in my case).
 
-At this point, young Mikołaj gave up.
-But **3 years later** I was testing some Go(lang) web frameworks, and they often listed *autotls* on their feature lists.
+Later, I was testing some Go(lang) web frameworks, I saw that they often listed *autotls* on their feature lists.
 I've decided to test what it is and **magically ✨✨✨** it generated a signed private key for me! 😲 At this point, I was amazed and wanted to find out **HOW?!**.
 If you don't know exactly what you want to ask about, there isn't a better place than *StackOverflow™️*, so I've asked [this](https://stackoverflow.com/questions/76968320/how-did-gin-generate-ssl-certificate-for-me-although-port-80-and-cname-are-block) question.
 I got the response that this magic spell can be used by saying [*Automated Certificate Management Environment Transport Layer Security Application‑Layer Protocol Negotiation Challenge Extension*, TLS-ALPN-01 for short](https://letsencrypt.org/docs/challenge-types/#tls-alpn-01).
