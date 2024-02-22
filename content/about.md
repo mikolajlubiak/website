@@ -1,5 +1,6 @@
 ---
 title: "About"
+tags: ['mikolaj','lubiak','about', 'mikolaj-lubiak']
 ---
 
 # Hi, I'm Mikołaj
