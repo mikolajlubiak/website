@@ -8,7 +8,7 @@ tags: ['mikolaj','lubiak','about', 'mikolaj-lubiak']
 ### Backend developer interested in cryptology, system administration, computer security, open source and real-time rendering.
 
 - 🧑‍💻️ I'm currently working at:
-    - [Sealcode](https://www.sealcode.it/) as a backend developer. I contributed to [Organic Maps](https://organicmaps.app/).
+    - [Sealcode](https://www.sealcode.it/) as a backend developer.
     - [Go2Ops](https://go2ops.com/) as a backend developer and sysadmin. I'm working on [Timoni](https://timoni.io/). I helped [Polskie Koleje Państwowe](https://www.pkp.pl/) in database transition.
     - [NeuroN Foundation](https://neuronfoundation.com/), which [I hacked](https://web.archive.org/web/20230902084403/http://neuronfoundation.com/), as a lead backend developer and sysadmin at [Lesson4Future](https://lesson4future.com/). [Lesson4Future](https://lesson4future.com/) is project made for [Narodowy Bank Polski](https://nbp.pl/).
 
