@@ -10,7 +10,8 @@ tags: ['mikolaj','lubiak','about', 'mikolaj-lubiak']
 - 🧑‍💻️ I'm currently working at:
     - [Sealcode](https://www.sealcode.it/) as a backend developer.
     - [Go2Ops](https://go2ops.com/) as a backend developer and sysadmin. I worked on [Timoni](https://timoni.io/).
-    - [NeuroN Foundation](https://neuronfoundation.com/), which [I hacked](https://web.archive.org/web/20230902084403/http://neuronfoundation.com/), as a lead backend developer and sysadmin at [Lesson4Future](https://lesson4future.com/). [Lesson4Future](https://lesson4future.com/) is project made for [Narodowy Bank Polski](https://nbp.pl/).
+    - [NeuroN Foundation](https://neuronfoundation.com/) as a [pentester](https://web.archive.org/web/20230902084403/http://neuronfoundation.com/).
+    - [Lesson4Future](https://lesson4future.com/) as a lead backend developer and sysadmin. [Lesson4Future](https://lesson4future.com/) is a project made for [Narodowy Bank Polski](https://nbp.pl/).
 
 - 🗂 My biggest project in:
 	- Python:
