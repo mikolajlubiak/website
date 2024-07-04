@@ -11,17 +11,24 @@ tags: ['mikolaj','lubiak','about', 'mikolaj-lubiak']
     - [Sealcode](https://www.sealcode.it/) as a backend developer.
     - [Go2Ops](https://go2ops.com/) as a backend developer and sysadmin. I worked on [Timoni](https://timoni.io/).
 
+I also do orders from private entities.
+
 - 🖥️ I was working at:
     - [NeuroN Foundation](https://neuronfoundation.com/) as a [pentester](https://web.archive.org/web/20230902084403/http://neuronfoundation.com/).
     - [Lesson4Future](https://lesson4future.com/) as a lead backend developer and sysadmin. [Lesson4Future](https://lesson4future.com/) is a project made for [Narodowy Bank Polski](https://nbp.pl/).
 
-- 🗂 My biggest project in:
+- 🗂 My biggest projects in:
 	- Python:
 		- https://github.com/mikolajlubiak/motey
 	- C++:
 		- https://github.com/mikolajlubiak/vectng
+        - https://github.com/mikolajlubiak/vulkan
+        - https://github.com/mikolajlubiak/espcon
+        - https://github.com/mikolajlubiak/opengl
+        - https://github.com/mikolajlubiak/coneng
 	- Go:
 		- https://github.com/mikolajlubiak/nofiles
+        - https://github.com/mikolajlubiak/gogin
 
 - 🗃 My other big projects:
     - https://github.com/stars/mikolajlubiak/lists/big-projects
