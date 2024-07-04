@@ -26,9 +26,6 @@ I also do orders from private entities.
         - https://github.com/mikolajlubiak/espcon
         - https://github.com/mikolajlubiak/opengl
         - https://github.com/mikolajlubiak/coneng
-	- Go:
-		- https://github.com/mikolajlubiak/nofiles
-        - https://github.com/mikolajlubiak/gogin
 
 - 🗃 My other big projects:
     - https://github.com/stars/mikolajlubiak/lists/big-projects
