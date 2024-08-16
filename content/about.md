@@ -23,9 +23,13 @@ I also do orders from private entities.
 	- C++:
 		- https://github.com/mikolajlubiak/vectng
         - https://github.com/mikolajlubiak/vulkan
+            - {{<  vid `https://video.infosec.exchange/video-playlists/embed/009c43c3-5b9f-4938-b551-ed7785192c03` `Showcase` >}}
         - https://github.com/mikolajlubiak/espcon
+            - {{<  vid `https://video.infosec.exchange/video-playlists/embed/b8dfbbbd-0a07-472e-af52-109852d51597` `Showcase` >}}
         - https://github.com/mikolajlubiak/opengl
+            - {{<  vid `https://video.infosec.exchange/video-playlists/embed/62177091-0759-4d5f-8091-3575786e1c0c` `Showcase` >}}
         - https://github.com/mikolajlubiak/coneng
+            - {{<  vid `https://video.infosec.exchange/video-playlists/embed/71b6f35b-7c31-47a7-bfcc-4c4bc2eab699` `Showcase` >}}
 
 - 🗃 My other big projects:
     - https://github.com/stars/mikolajlubiak/lists/big-projects
