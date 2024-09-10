@@ -1,82 +1,95 @@
 <!DOCTYPE html>
 <html lang="{{ .Site.Language }}">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="{{ with .Params.description }}{{ . }}{{ else }}{{ .Summary }}{{ end }}">
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="{{ .Site.BaseURL }}">
-    <link rel='alternate' type='application/rss+xml' title="{{ .Site.Title }} RSS" href='/index.xml'>
-    <link rel='stylesheet' type='text/css' href='/style.css'>
-    {{ with .Site.Params.favicon }}<link rel="icon" href="{{ . }}">{{ end }}
-    <title>404 Not Found</title>
-    <style>
-        body {
-            text-align: center;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            margin: 0;
-        }
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="{{ with .Params.description }}{{ . }}{{ else }}{{ .Summary }}{{ end }}">
+		<meta name="robots" content="index, follow">
+		<link rel="canonical" href="{{ .Site.BaseURL }}">
+		<link rel='alternate' type='application/rss+xml' title="{{ .Site.Title }} RSS" href='/index.xml'>
+		<link rel='stylesheet' type='text/css' href='/style.css'>
+		{{ with .Site.Params.favicon }}<link rel="icon" href="{{ . }}">{{ end }}
+		<title>404 Not Found</title>
+		<style>
+body {
+	text-align: center;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: 0;
+}
 
-        .centered {
-            font-size: 100px;
-            color: white; /* Ensure contrast with background */
-            text-shadow: 1px 1px 2px black; /* Optional: Add text shadow for better visibility */
-            margin-bottom: 20px; /* Space between text and image */
-        }
+	.centered {
+		font-size: 100px;
+		color: white; /* Ensure contrast with background */
+		text-shadow: 1px 1px 2px black; /* Optional: Add text shadow for better visibility */
+		margin-bottom: 20px; /* Space between text and image */
+	}
 
-        .centered-btn {
-            margin-top: 20px;
-        }
+	.centered-btn {
+		margin-top: 20px;
+	}
 
-        img {
-            display: block;
-            margin: auto;
-        }
-    </style>
-</head>
-<body>
-<main>
-    <div id="cat" class="container"></div>
-    <div class="centered-btn">
-        <button id="downloadCat">Download this cat GIF</button>
-    </div>
-    <script>
-        function displayNotFound() {
-            const notFound = document.createElement("div");
-            notFound.classList.add('centered');
-            notFound.innerHTML = "<strong>404 Not Found</strong>";
-            document.getElementById("cat").appendChild(notFound);
-        }
+	img {
+		display: block;
+		margin: auto;
+	}
+		</style>
+	</head>
+	<body>
+		<main>
+			<div id="cat" class="container"></div>
 
-        async function fetchCatImage() {
-            const response = await fetch("https://cataas.com/cat/gif");
-            const imageBlob = await response.blob();
-            return URL.createObjectURL(imageBlob);
-        }
+			<script>
+				function displayNotFound() {
+					const notFound = document.createElement("div");
+					notFound.classList.add('centered');
+					notFound.innerHTML = "<strong>404 Not Found</strong>";
+					document.getElementById("cat").appendChild(notFound);
+				}
 
-        async function displayCat() {
-            displayNotFound();
+				async function fetchCatImage() {
+					const response = await fetch("https://cataas.com/cat/gif");
+					const imageBlob = await response.blob();
+					return URL.createObjectURL(imageBlob);
+				}
 
-            const catImage = new Image();
-            catImage.src = await fetchCatImage();
-            catImage.alt = "A cute cat GIF";
-            document.getElementById("cat").appendChild(catImage);
-        }
+				async function displayDownloadButton() {
+					const button = document.createElement("button");
+					button.id = "downloadCat";
+					button.classList.add("centered-btn");
+					button.textContent = "Download this cat GIF";
+					document.querySelector("#cat").appendChild(button);
 
-        document.getElementById("downloadCat").addEventListener("click", function() {
-            const link = document.createElement("a");
-            link.href = document.querySelector("#cat img").src;
-            link.download = "cat.gif";
-            link.click();
-        });
+					button.addEventListener("click", function() {
+						const link = document.createElement("a");
+						link.href = document.querySelector("#cat img").src;
+						link.download = "cat.gif";
+						link.click();
+					})
+				}
 
-        displayCat();
-    </script>
-</main>
-</body>
+				async function displayCat() {
+					const catImage = new Image();
+					catImage.src = await fetchCatImage();
+					catImage.alt = "A cute cat GIF";
+
+					catImage.onload = function() {
+						displayDownloadButton();
+					};
+
+
+					document.getElementById("cat").appendChild(catImage);
+				}
+
+
+				displayNotFound();
+
+				displayCat();
+			</script>
+		</main>
+	</body>
 </html>
 
