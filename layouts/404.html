@@ -101,14 +101,13 @@ body {
 				}
 
 				async function displayCat() {
-				    setInterval(updateProgressBar, 100, false); // Update progress bar every 50ms
 
 					const catImage = new Image();
 					catImage.src = await fetchCatImage();
 					catImage.alt = "A cute cat GIF";
 
 					catImage.onload = function() {
-						progress = 100;
+						clearInterval(progressBarInterval)
 						updateProgressBar(true);
 						displayDownloadButton();
 					};
@@ -117,6 +116,8 @@ body {
 				}
 
 				addProgressBar()
+				const progressBarInterval = setInterval(updateProgressBar, 100, false); // Update progress bar every 100ms
+
 				displayNotFound();
 				displayCat();
 			</script>
