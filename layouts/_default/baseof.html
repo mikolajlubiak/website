@@ -1,45 +1,48 @@
 <!DOCTYPE html>
 <html lang="{{ .Site.Language }}">
-<head>
-	<title>{{ if not .IsHome }}{{ .Title | title }} | {{ end }}{{ .Site.Title }}</title>
-	<link rel="canonical" href="{{ .Site.BaseURL }}">
-	<link rel='alternate' type='application/rss+xml' title="{{ .Site.Title }} RSS" href='/index.xml'>
-	<link rel='stylesheet' type='text/css' href='/style.css'>
-	{{ with .Site.Params.favicon }}<link rel="icon" href="{{ . }}">
-	{{ end -}}
-	<meta name="author" content="Mikołaj Lubiak">
-	<meta name="description" content="{{ if .IsHome }} Mikołaj Lubiak's personal website {{ end }}{{ with .Params.description }}{{ . }}{{ else }}{{ .Summary }}{{ end }}">
-	{{ if isset .Params "tags" }}<meta name="keywords" content="{{ with .Params.tags }}{{ delimit . ", " }}{{ end }}">
-	{{ end -}}
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="robots" content="index, follow">
-	<meta charset="utf-8">
-	<meta http-equiv="onion-location" content="http://qkxiyjc7smqhugxonenoi4ug3p35wotqzkxddhatpogytjrlukcaspqd.onion"/>
-</head>
-<body>
-{{ if .Site.Menus.main }}{{ partial "nav.html" . }}{{ end -}}
-<main>
-<header><h1 id="tag_{{ .Title }}">{{ block "title" . }}{{ end }}</h1></header>
-<article>
-{{ block "main" . }}
-{{ .Content }}
-{{ end }}
-{{ if .Param "nextprev" }}{{ partial "nextprev.html" . -}}{{ end -}}
-{{ if .Param "taglist" }}{{ partial "taglist.html" . }}{{ end -}}
-</article>
-</main>
-{{ block "footer" . }}
-<footer>
-	<p>
-	<a href="{{ .Site.BaseURL }}">{{ .Site.BaseURL }}</a> &middot;
-	<a href="https://github.com/mikolajlubiak">Github</a> &middot;
-	<a href="mailto:lubiak@proton.me">lubiak@proton.me</a> &middot;
-	{{ if .Param "showrss" }}<a href="/index.xml"><img src="/rss.svg" style="max-height:1.2em" alt="RSS Feed" title="Subscribe via RSS for updates."></a>{{ end }}
-	</p>
-	<p>
-	&bull; I'm looking for a job: <a href="/about">about me</a>, <a href="/resume.pdf">my resume</a>, <a href="https://www.linkedin.com/in/lubiak/">Linkedin</a>.
-	</p>
-</footer>
-{{ end }}
-</body>
+	<head>
+		<title>{{ if not .IsHome }}{{ .Title | title }} | {{ end }}{{ .Site.Title }}</title>
+		<link rel="canonical" href="{{ .Site.BaseURL }}">
+		<link rel='alternate' type='application/rss+xml' title="{{ .Site.Title }} RSS" href='/index.xml'>
+		<link rel='stylesheet' type='text/css' href='/style.css'>
+		{{ with .Site.Params.favicon }}<link rel="icon" href="{{ . }}">
+		{{ end -}}
+		<meta name="author" content="Mikołaj Lubiak">
+		<meta name="description" content="{{ if .IsHome }} Mikołaj Lubiak's personal website {{ end }}{{ with .Params.description }}{{ . }}{{ else }}{{ .Summary }}{{ end }}">
+		{{ if isset .Params "tags" }}<meta name="keywords" content="{{ with .Params.tags }}{{ delimit . ", " }}{{ end }}">
+		{{ end -}}
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="robots" content="index, follow">
+		<meta charset="utf-8">
+		<meta http-equiv="onion-location" content="http://qkxiyjc7smqhugxonenoi4ug3p35wotqzkxddhatpogytjrlukcaspqd.onion"/>
+	</head>
+	<body>
+		{{ if .Site.Menus.main }}{{ partial "nav.html" . }}{{ end -}}
+		<main>
+			<header><h1 id="tag_{{ .Title }}">{{ block "title" . }}{{ end }}</h1></header>
+			<article>
+				{{ block "main" . }}
+				{{ .Content }}
+				{{ end }}
+				{{ if .Param "nextprev" }}{{ partial "nextprev.html" . -}}{{ end -}}
+				{{ if .Param "taglist" }}{{ partial "taglist.html" . }}{{ end -}}
+			</article>
+		</main>
+		{{ block "footer" . }}
+		<footer>
+			<p>
+			<a href="{{ .Site.BaseURL }}">{{ .Site.BaseURL }}</a> &middot;
+			<a href="https://github.com/mikolajlubiak">Github</a> &middot;
+			<a href="mailto:lubiak@proton.me">lubiak@proton.me</a> &middot;
+			{{ if .Param "showrss" }}<a href="/index.xml"><img src="/rss.svg" style="max-height:1.2em" alt="RSS Feed" title="Subscribe via RSS for updates."></a>{{ end }}
+			</p>
+			<p>
+			&bull; I'm looking for a job: <a href="/about">about me</a>, <a href="/resume.pdf">my resume</a>, <a href="https://www.linkedin.com/in/lubiak/">Linkedin</a>.
+			</p>
+			<p>
+			<a href="/404">404 Cat Not Found</a>
+			</p>
+		</footer>
+		{{ end }}
+	</body>
 </html>
