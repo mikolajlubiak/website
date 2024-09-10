@@ -43,13 +43,42 @@ body {
 			<div id="cat" class="container"></div>
 
 			<script>
-				function displayNotFound() {
+				// Progress bar
+				let progress = 0;
+
+				async function addProgressBar() {
+					const progressBar = document.createElement('div');
+					progressBar.id = "progress-bar";
+					progressBar.style.backgroundColor = '#ff0000'; // Light gray background
+					progressBar.style.height = '10px'; // Set desired height
+					progressBar.style.borderRadius = '5px';
+					progressBar.style.marginTop = '20px';
+					progressBar.style.width = `0%`;
+
+					document.body.appendChild(progressBar);
+				}
+
+				async function updateProgressBar(finished) {
+					const progressBar = document.getElementById("progress-bar");
+					if (finished) {
+						progressBar.style.width = '100%';
+						progressBar.style.backgroundColor = '#00ff00'; // Green when finished
+					} else {
+						const increment = Math.floor(Math.random() * 5); // Random increment between 0% and 5%
+						progress += increment;
+						progressBar.style.width = `${Math.min(progress, 100)}%`; // Ensure progress doesn't exceed 100%
+					}
+				}
+
+				// 404
+				async function displayNotFound() {
 					const notFound = document.createElement("div");
 					notFound.classList.add('centered');
 					notFound.innerHTML = "<strong>404 Not Found</strong>";
 					document.getElementById("cat").appendChild(notFound);
 				}
 
+				// Cats
 				async function fetchCatImage() {
 					const response = await fetch("https://cataas.com/cat/gif");
 					const imageBlob = await response.blob();
@@ -72,21 +101,23 @@ body {
 				}
 
 				async function displayCat() {
+				    setInterval(updateProgressBar, 100, false); // Update progress bar every 50ms
+
 					const catImage = new Image();
 					catImage.src = await fetchCatImage();
 					catImage.alt = "A cute cat GIF";
 
 					catImage.onload = function() {
+						progress = 100;
+						updateProgressBar(true);
 						displayDownloadButton();
 					};
-
 
 					document.getElementById("cat").appendChild(catImage);
 				}
 
-
+				addProgressBar()
 				displayNotFound();
-
 				displayCat();
 			</script>
 		</main>
