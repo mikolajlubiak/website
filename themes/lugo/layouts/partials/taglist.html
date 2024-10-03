@@ -2,7 +2,7 @@
             {{- $tagsLen := len .Params.tags -}}
             {{- if gt $tagsLen 0 -}}
         <div style="clear:both" class=taglist>
-		{{- with .Site.Params.relatedtext }}{{ . }}<br>{{ end -}}
+		<p class="spaced">{{- with .Site.Params.relatedtext }}{{ . }}</p>{{ end -}}
                 {{- range $k, $v := .Params.tags -}}
                 {{- $url := printf "tags/%s" (. | urlize | lower) -}}
                 <a id="tag_{{ . | lower }}" href="{{ $url | absURL }}">{{ . }}</a>
