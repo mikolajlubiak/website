@@ -9,7 +9,7 @@ tags: ['mikolaj','lubiak','about', 'mikolaj-lubiak']
 
 - 🧑‍💻️ I'm currently working at:
     - [Sealcode](https://www.sealcode.it/) as a backend developer.
-    - Labs With Community as an open source developer - backend and embedded.
+    - Lab With Community as an open source developer - backend and embedded.
 
 I also do orders from private entities.
 
