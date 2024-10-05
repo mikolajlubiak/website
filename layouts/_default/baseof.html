@@ -5,12 +5,19 @@
 		<link rel="canonical" href="{{ .Site.BaseURL }}">
 		<link rel='alternate' type='application/rss+xml' title="{{ .Site.Title }} RSS" href='/index.xml'>
 		<link rel='stylesheet' type='text/css' href='/style.css'>
-		{{ with .Site.Params.favicon }}<link rel="icon" href="{{ . }}">
-		{{ end -}}
+
+		<link rel="icon" type="image/webp" href="/favicon-48x48.webp" sizes="48x48" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="shortcut icon" href="/favicon.ico" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.webp" />
+		<link rel="manifest" href="/site.webmanifest" />
+
+		<meta name="apple-mobile-web-app-title" content="lubiak.pages.dev" />
 		<meta name="author" content="Mikołaj Lubiak">
 		<meta name="description" content="{{ if .IsHome }} Mikołaj Lubiak's personal website {{ end }}{{ with .Params.description }}{{ . }}{{ else }}{{ .Summary }}{{ end }}">
 		{{ if isset .Params "tags" }}<meta name="keywords" content="{{ with .Params.tags }}{{ delimit . ", " }}{{ end }}">
 		{{ end -}}
+
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="robots" content="index, follow">
 		<meta charset="utf-8">
