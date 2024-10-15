@@ -25,6 +25,9 @@ I also do orders from private entities.
     - C++:
         - https://github.com/mikolajlubiak/vectng
             {{<  vid `https://video.infosec.exchange/video-playlists/embed/5ea1d8e8-ffa6-445c-9f6e-cdd904268a2e` `Showcase` >}}
+        - https://github.com/mikolajlubiak/vlkn
+            {{<  vid `https://video.infosec.exchange/video-playlists/embed/b9222080-db7d-46ff-a816-ecbaf41c3682` `Showcase` >}}
+    - C++ (old/bad code quality):
         - https://github.com/mikolajlubiak/vulkan
             {{<  vid `https://video.infosec.exchange/video-playlists/embed/009c43c3-5b9f-4938-b551-ed7785192c03` `Showcase` >}}
         - https://github.com/mikolajlubiak/espcon
