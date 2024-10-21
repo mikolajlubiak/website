@@ -23,15 +23,17 @@ I also do orders from private entities.
         - https://github.com/mikolajlubiak/motey
             {{<  vid `https://video.infosec.exchange/video-playlists/embed/36d6e2c4-e107-4993-9b4d-be1dc3878541` `Showcase` >}}
     - C++:
-        - https://github.com/mikolajlubiak/vectng
-            {{<  vid `https://video.infosec.exchange/video-playlists/embed/5ea1d8e8-ffa6-445c-9f6e-cdd904268a2e` `Showcase` >}}
+        - https://github.com/mikolajlubiak/memory
+            {{<  vid `https://video.infosec.exchange/video-playlists/embed/75c0766f-e5ad-42eb-b9c1-db2ea5f28fff` `Showcase` >}}
         - https://github.com/mikolajlubiak/vlkn
             {{<  vid `https://video.infosec.exchange/video-playlists/embed/b9222080-db7d-46ff-a816-ecbaf41c3682` `Showcase` >}}
+        - https://github.com/mikolajlubiak/vectng
+            {{<  vid `https://video.infosec.exchange/video-playlists/embed/5ea1d8e8-ffa6-445c-9f6e-cdd904268a2e` `Showcase` >}}
+        - https://github.com/mikolajlubiak/espcon
+            {{<  vid `https://video.infosec.exchange/video-playlists/embed/b8dfbbbd-0a07-472e-af52-109852d51597` `Showcase` >}}
     - C++ (old/bad code quality):
         - https://github.com/mikolajlubiak/vulkan
             {{<  vid `https://video.infosec.exchange/video-playlists/embed/009c43c3-5b9f-4938-b551-ed7785192c03` `Showcase` >}}
-        - https://github.com/mikolajlubiak/espcon
-            {{<  vid `https://video.infosec.exchange/video-playlists/embed/b8dfbbbd-0a07-472e-af52-109852d51597` `Showcase` >}}
         - https://github.com/mikolajlubiak/opengl
             {{<  vid `https://video.infosec.exchange/video-playlists/embed/62177091-0759-4d5f-8091-3575786e1c0c` `Showcase` >}}
         - https://github.com/mikolajlubiak/coneng
