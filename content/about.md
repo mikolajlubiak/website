@@ -25,7 +25,7 @@ I also do orders from private entities.
     - C++:
         - https://github.com/mikolajlubiak/memory
             {{<  vid `https://video.infosec.exchange/video-playlists/embed/75c0766f-e5ad-42eb-b9c1-db2ea5f28fff` `Showcase` >}}
-        - https://github.com/mikolajlubiak/terminal\_animation
+        - https://github.com/mikolajlubiak/terminal_animation
             {{<  vid `https://video.infosec.exchange/video-playlists/embed/f2c67790-9340-4a11-aa3f-515ee0a45ddd` `Showcase` >}}
         - https://github.com/mikolajlubiak/vlkn
             {{<  vid `https://video.infosec.exchange/video-playlists/embed/b9222080-db7d-46ff-a816-ecbaf41c3682` `Showcase` >}}
