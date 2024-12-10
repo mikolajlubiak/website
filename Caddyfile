@@ -20,4 +20,9 @@ lubiak.k.vu {
 
 		Onion-Location http://qkxiyjc7smqhugxonenoi4ug3p35wotqzkxddhatpogytjrlukcaspqd.onion{path}
 	}
+
+	handle_errors {
+		rewrite * /{err.status_code}.html
+		file_server
+	}
 }
