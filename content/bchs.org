@@ -11,11 +11,11 @@ BCHS is a software stack for web development. It uses a BSD based OS (operating 
 2. Enable incoming connections on ports 80 and 443 in your system (OpenBSD) firewall. It's allowed by default.
 
 ** OpenBSD
-1. ~systemctl enable httpd~ Start the server on startup automatically.
-2. ~systemctl enable slowcgi~ Start the slowcgi on startup automatically.
-3. ~systemctl start httpd~ Start server for now without the need to reboot.
-3. ~systemctl start httpd~ Start slowcgi for now without the need to reboot.
-4. ~vi /etc/httpd.conf~ Edit httpd config file.
+1. ~doas rcctl enable httpd~ Start the server on startup automatically.
+2. ~doas rcctl enable slowcgi~ Start the slowcgi on startup automatically.
+3. ~doas rcctl start httpd~ Start server for now without the need to reboot.
+3. ~doas rcctl start slowcgi~ Start slowcgi for now without the need to reboot.
+4. ~doas vi /etc/httpd.conf~ Edit httpd config file.
 #+begin_src
 server "http" {
     listen on * port 80 block return 301 "https://$HTTP_HOST$REQUEST_URI"
@@ -63,7 +63,7 @@ int main(void)
 #+begin_src
 #!/bin/sh
 cc -static -g -W -Wall -Wextra -o cgi cgi.c
-install -o www -g www -m 0500 cgi /var/www/cgi-bin
+doas install -o www -g www -m 0500 cgi /var/www/cgi-bin
 #+end_src
 
 ** TLS
@@ -73,5 +73,5 @@ install -o www -g www -m 0500 cgi /var/www/cgi-bin
 
 ** Final deploying
 1. ~sh ~/cgi/cgi.sh~ Compile and deploy your source code.
-2. ~rcctl restart httpd~ Restart the httpd server to apply your configuration.
+2. ~doas rcctl restart httpd~ Restart the httpd server to apply your configuration.
 
