@@ -1,5 +1,5 @@
 User-Agent: *
-Disallow:
+Allow: /
 
 User-agent: CCBot
 Disallow: /
@@ -20,3 +20,4 @@ User-Agent: FacebookBot
 Disallow: /
 
 Sitemap: {{ .Site.BaseURL }}sitemap.xml
+

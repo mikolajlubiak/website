@@ -6,14 +6,25 @@ theme = 'lugo'
 enableRobotsTXT = true
 
 [params]
-  # "relatedtext" is the text that appears above the tag list at the bottom of pages.
-  relatedtext = "Related"
+	# "relatedtext" is the text that appears above the tag list at the bottom of pages.
+	relatedtext = "Related"
 
-  #list items
-  datesinlist = false
-  authorsinlist = false
+	#list items
+	datesinlist = false
+	authorsinlist = false
 
-  #footer items
-  nextprev = true
-  taglist = true
-  showrss = true
+	#footer items
+	nextprev = true
+	taglist = true
+	showrss = true
+
+[imaging]
+	anchor = 'smart'
+	bgColor = '#111111'
+	quality = 75
+	resampleFilter = 'lanczos'
+	[imaging.exif]
+		disableDate = true
+		disableLatLong = true
+		excludeFields = '.*'
+
