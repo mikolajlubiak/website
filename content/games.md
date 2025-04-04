@@ -11,3 +11,7 @@ tags: ['games', 'raylib', 'c++']
 * [**Repository**](https://github.com/mikolajlubiak/physics_automata)
 * [**Game**](/physics_automata)
 
+## Pop Bubbles:
+* **Pop em bubbles**
+* [**Repository**](https://github.com/mikolajlubiak/pop_bubbles)
+* [**Game**](/pop_bubbles)
