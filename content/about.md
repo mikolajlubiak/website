@@ -24,7 +24,7 @@ tags: ['mikolaj','lubiak','about', 'mikolaj-lubiak']
 
 - 📰 I write articles on [my website](https://lubiak.pages.dev/) when I have something interesting to say.
 
-- 📬 You can get in contact with me by [email](mailto:lubiak@proton.me) ([PGP key](https://keys.openpgp.org/search?q=lubiak%40proton.me)), [Matrix protocol](https://matrix.to/#/@galanonim:matrix.org) or [Signal](https://signal.me/#eu/nq4qY30m4xgeCZ7R5IGoSUGbBK0n8Jg1Axi0cxbl3zAQdo3ikJVFioC/didTHi/F).
+- 📬 You can get in contact with me by [email](mailto:lubiak@proton.me) ([PGP key](https://keys.openpgp.org/search?q=lubiak%40proton.me)), or [Signal](https://signal.me/#eu/nq4qY30m4xgeCZ7R5IGoSUGbBK0n8Jg1Axi0cxbl3zAQdo3ikJVFioC_didTHi_F).
 
 - 📄 If you consider hiring me, here is my [resume](https://lubiak.pages.dev/resume.pdf) and here is my [Linkedin](https://www.linkedin.com/in/lubiak/).
 
