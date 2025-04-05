@@ -15,3 +15,8 @@ tags: ['games', 'raylib', 'c++']
 * **Pop em bubbles**
 * [**Repository**](https://github.com/mikolajlubiak/pop_bubbles)
 * [**Game**](/pop_bubbles)
+
+## Chess:
+* **Chess game implementation**
+* [**Repository**](https://github.com/mikolajlubiak/chess_game)
+* [**Game**](/chess)
