@@ -14,10 +14,10 @@ tags: ['mikolaj','lubiak','about', 'mikolaj-lubiak']
         - https://github.com/mikolajlubiak/pixelpin
     - Python:
         - https://github.com/mikolajlubiak/motey
-        - Backend of app.focus-stones.pl
+        - Backend of https://app.focus-stones.pl/
     - Flutter:
         - https://github.com/mikolajlubiak/pixelpin-app
-        - Frontend of app.focus-stones.pl
+        - Frontend of https://app.focus-stones.pl/
 
 - 🎥 You can find my project video showcases here:
     - https://video.infosec.exchange/c/gall_anonim_/video-playlists
