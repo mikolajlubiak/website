@@ -19,6 +19,10 @@ tags: ['mikolaj','lubiak','about', 'mikolaj-lubiak']
         - https://github.com/mikolajlubiak/pixelpin-app
         - Frontend of https://app.focus-stones.pl/
 
+- 🐧 My biggest open source contributions:
+    - Intel® Cryptography Primitives: https://github.com/intel/cryptography-primitives/pull/95
+    - FTXUI: https://github.com/ArthurSonzogni/FTXUI/pull/938
+
 - 🎥 You can find my project video showcases here:
     - https://video.infosec.exchange/c/gall_anonim_/video-playlists
 
