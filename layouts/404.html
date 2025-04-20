@@ -1,146 +1,146 @@
 <!DOCTYPE html>
 <html lang="{{ .Site.Language }}">
 
-<head>
-	<title>{{ if not .IsHome }}{{ .Title | title }} | {{ end }}{{ .Site.Title }}</title>
-	<link rel="canonical" href="{{ .Site.BaseURL }}">
-	<link rel='alternate' type='application/rss+xml' title="{{ .Site.Title }} RSS" href='/index.xml'>
-	<link rel='stylesheet' type='text/css' href='/style.css'>
+  <head>
+    <title>{{ if not .IsHome }}{{ .Title | title }} | {{ end }}{{ .Site.Title }}</title>
+    <link rel="canonical" href="{{ .Site.BaseURL }}">
+    <link rel='alternate' type='application/rss+xml' title="{{ .Site.Title }} RSS" href='/index.xml'>
+    <link rel='stylesheet' type='text/css' href='/style.css'>
 
-	<link rel="icon" type="image/webp" href="/favicon-48x48.webp" sizes="48x48" />
-	<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-	<link rel="shortcut icon" href="/favicon.ico" />
-	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.webp" />
-	<link rel="manifest" href="/site.webmanifest" />
+    <link rel="icon" type="image/webp" href="/favicon-48x48.webp" sizes="48x48" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.webp" />
+    <link rel="manifest" href="/site.webmanifest" />
 
-	<meta name="apple-mobile-web-app-title" content="lubiak.pages.dev" />
-	<meta name="author" content="Mikołaj Lubiak">
-	<meta name="description"
-		content="{{ if .IsHome }} Mikołaj Lubiak's personal website {{ end }}{{ with .Params.description }}{{ . }}{{ else }}{{ .Summary }}{{ end }}">
-	{{ if isset .Params "tags" }}
-	<meta name="keywords" content="{{ with .Params.tags }}{{ delimit . " , " }}{{ end }}">
-	{{ end -}}
+    <meta name="apple-mobile-web-app-title" content="lubiak.pages.dev" />
+    <meta name="author" content="Mikołaj Lubiak">
+    <meta name="description"
+      content="{{ if .IsHome }} Mikołaj Lubiak's personal website {{ end }}{{ with .Params.description }}{{ . }}{{ else }}{{ .Summary }}{{ end }}">
+    {{ if isset .Params "tags" }}
+    <meta name="keywords" content="{{ with .Params.tags }}{{ delimit . " , " }}{{ end }}">
+    {{ end -}}
 
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="robots" content="index, follow">
-	<meta charset="utf-8">
-	<meta http-equiv="onion-location" content="http://qkxiyjc7smqhugxonenoi4ug3p35wotqzkxddhatpogytjrlukcaspqd.onion" />
-	<style>
-		body {
-			text-align: center;
-			height: 100vh;
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-			align-items: center;
-			margin: 0;
-		}
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="index, follow">
+    <meta charset="utf-8">
+    <meta http-equiv="onion-location" content="http://qkxiyjc7smqhugxonenoi4ug3p35wotqzkxddhatpogytjrlukcaspqd.onion" />
+    <style>
+    body {
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    }
 
-		.centered {
-			font-size: 100px;
-			color: white;
-			/* Ensure contrast with background */
-			text-shadow: 1px 1px 2px black;
-			/* Optional: Add text shadow for better visibility */
-			margin-bottom: 20px;
-			/* Space between text and image */
-		}
+    .centered {
+    font-size: 100px;
+    color: white;
+    /* Ensure contrast with background */
+    text-shadow: 1px 1px 2px black;
+    /* Optional: Add text shadow for better visibility */
+    margin-bottom: 20px;
+    /* Space between text and image */
+    }
 
-		.centered-btn {
-			margin-top: 20px;
-		}
+    .centered-btn {
+    margin-top: 20px;
+    }
 
-		img {
-			display: block;
-			margin: auto;
-		}
-	</style>
-</head>
+    img {
+    display: block;
+    margin: auto;
+    }
+    </style>
+  </head>
 
-<body>
-	<main>
-		<div id="cat" class="container"></div>
+  <body>
+    <main>
+      <div id="cat" class="container"></div>
 
-		<script>
-			// Progress bar
-			let progress = 0;
+      <script>
+      // Progress bar
+      let progress = 0;
 
-			async function addProgressBar() {
-				const progressBar = document.createElement('div');
-				progressBar.id = "progress-bar";
-				progressBar.style.backgroundColor = '#ff0000'; // Light gray background
-				progressBar.style.height = '10px'; // Set desired height
-				progressBar.style.borderRadius = '5px';
-				progressBar.style.marginTop = '20px';
-				progressBar.style.width = `0%`;
+      async function addProgressBar() {
+        const progressBar = document.createElement('div');
+        progressBar.id = "progress-bar";
+        progressBar.style.backgroundColor = '#ff0000'; // Light gray background
+        progressBar.style.height = '10px'; // Set desired height
+        progressBar.style.borderRadius = '5px';
+        progressBar.style.marginTop = '20px';
+        progressBar.style.width = `0%`;
 
-				document.body.appendChild(progressBar);
-			}
+        document.body.appendChild(progressBar);
+      }
 
-			async function updateProgressBar(finished) {
-				const progressBar = document.getElementById("progress-bar");
-				if (finished) {
-					progressBar.style.width = '100%';
-					progressBar.style.backgroundColor = '#00ff00'; // Green when finished
-				} else {
-					const increment = Math.floor(Math.random() * 5); // Random increment between 0% and 5%
-					progress += increment;
-					progressBar.style.width = `${Math.min(progress, 100)}%`; // Ensure progress doesn't exceed 100%
-				}
-			}
+      async function updateProgressBar(finished) {
+        const progressBar = document.getElementById("progress-bar");
+        if (finished) {
+          progressBar.style.width = '100%';
+          progressBar.style.backgroundColor = '#00ff00'; // Green when finished
+        } else {
+          const increment = Math.floor(Math.random() * 5); // Random increment between 0% and 5%
+          progress += increment;
+          progressBar.style.width = `${Math.min(progress, 100)}%`; // Ensure progress doesn't exceed 100%
+        }
+      }
 
-			// 404
-			async function displayNotFound() {
-				const notFound = document.createElement("div");
-				notFound.classList.add('centered');
-				notFound.innerHTML = "<strong>404 Not Found</strong>";
-				document.getElementById("cat").appendChild(notFound);
-			}
+      // 404
+      async function displayNotFound() {
+        const notFound = document.createElement("div");
+        notFound.classList.add('centered');
+        notFound.innerHTML = "<strong>404 Not Found</strong>";
+        document.getElementById("cat").appendChild(notFound);
+      }
 
-			// Cats
-			async function fetchCatImage() {
-				const response = await fetch("https://cataas.com/cat/gif");
-				const imageBlob = await response.blob();
-				return URL.createObjectURL(imageBlob);
-			}
+      // Cats
+      async function fetchCatImage() {
+        const response = await fetch("https://cataas.com/cat/gif");
+        const imageBlob = await response.blob();
+        return URL.createObjectURL(imageBlob);
+      }
 
-			async function displayDownloadButton() {
-				const button = document.createElement("button");
-				button.id = "downloadCat";
-				button.classList.add("centered-btn");
-				button.textContent = "Download this cat GIF";
-				document.querySelector("#cat").appendChild(button);
+      async function displayDownloadButton() {
+        const button = document.createElement("button");
+        button.id = "downloadCat";
+        button.classList.add("centered-btn");
+        button.textContent = "Download this cat GIF";
+        document.querySelector("#cat").appendChild(button);
 
-				button.addEventListener("click", function () {
-					const link = document.createElement("a");
-					link.href = document.querySelector("#cat img").src;
-					link.download = "cat.gif";
-					link.click();
-				})
-			}
+        button.addEventListener("click", function () {
+          const link = document.createElement("a");
+          link.href = document.querySelector("#cat img").src;
+          link.download = "cat.gif";
+          link.click();
+        })
+      }
 
-			async function displayCat() {
+      async function displayCat() {
 
-				const catImage = new Image();
-				catImage.src = await fetchCatImage();
-				catImage.alt = "A cute cat GIF";
+        const catImage = new Image();
+        catImage.src = await fetchCatImage();
+        catImage.alt = "A cute cat GIF";
 
-				catImage.onload = function () {
-					clearInterval(progressBarInterval)
-					updateProgressBar(true);
-					displayDownloadButton();
-				};
+        catImage.onload = function () {
+          clearInterval(progressBarInterval)
+          updateProgressBar(true);
+          displayDownloadButton();
+        };
 
-				document.getElementById("cat").appendChild(catImage);
-			}
+        document.getElementById("cat").appendChild(catImage);
+      }
 
-			addProgressBar()
-			const progressBarInterval = setInterval(updateProgressBar, 100, false); // Update progress bar every 100ms
+      addProgressBar()
+      const progressBarInterval = setInterval(updateProgressBar, 100, false); // Update progress bar every 100ms
 
-			displayNotFound();
-			displayCat();
-		</script>
-	</main>
-</body>
+      displayNotFound();
+      displayCat();
+      </script>
+    </main>
+  </body>
 
 </html>
