@@ -10,8 +10,13 @@ tags: ['mikolaj','lubiak','about', 'mikolaj-lubiak']
 - 🗂 My biggest projects in:
     - C++:
         - https://github.com/mikolajlubiak/terminal_animation
-        - https://github.com/MathBoardProject/MathBoardAlgoML
         - https://github.com/mikolajlubiak/pixelpin
+        - https://github.com/mikolajlubiak/vlkn
+        - https://github.com/mikolajlubiak/memory
+        - https://github.com/mikolajlubiak/espcon
+        - https://github.com/MathBoardProject/MathBoardAlgoML
+    - C/ASM:
+        - https://github.com/mikolajlubiak/gos
     - Python:
         - https://github.com/mikolajlubiak/motey
     - Flutter:
