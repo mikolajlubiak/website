@@ -10,7 +10,7 @@ enableRobotsTXT = true
 	relatedtext = "Related"
 
 	#list items
-	datesinlist = false
+	datesinlist = true
 	authorsinlist = false
 
 	#footer items
