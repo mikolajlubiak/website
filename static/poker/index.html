@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <style>
+    html, body {
+    height: 100%;
+    margin: 0;
+    }
+    canvas {
+    display: block;
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    touch-action: none;
+    }
+    </style>
+  </head>
+
+  <body>
+    <canvas id="canvas" oncontextmenu="event.preventDefault()"></canvas>
+
+    <script>
+    var Module = { canvas: null };
+
+    (function() {
+      const canvas = document.getElementById('canvas');
+      Module.canvas = canvas;
+
+      function resize() {
+        const dpr = Math.max(1, window.devicePixelRatio || 1);
+        const w = Math.max(1, Math.round(window.innerWidth * dpr));
+        const h = Math.max(1, Math.round(window.innerHeight * dpr));
+        canvas.style.width = window.innerWidth + 'px';
+        canvas.style.height = window.innerHeight + 'px';
+        if (canvas.width !== w || canvas.height !== h) {
+          canvas.width = w;
+          canvas.height = h;
+        }
+      }
+
+      resize();
+      window.addEventListener('resize', resize, {passive: true});
+      if ('orientation' in window) window.addEventListener('orientationchange', resize);
+    })();
+    </script>
+
+    <script src="index.js"></script>
+  </body>
+</html>
