@@ -44,7 +44,7 @@ Interested in: OS internals, embedded Linux, real-time rendering, game engines, 
 
 - 🗄 All of my projects are available at [GitHub](https://github.com/mikolajlubiak) or [Codeberg](https://codeberg.org/mikolajlubiak).
 
-- 🤔 I'm interested in chess, open source, gym, Fediverse and the Linux kernel and ecosystem.
+- 🤔 Other than programming I'm interested in biking, chess, open source, gym, Fediverse and the Linux kernel and ecosystem.
 
 - 📰 I write articles on [my website](https://lubiak.pages.dev/) when I have something interesting to say.
 
