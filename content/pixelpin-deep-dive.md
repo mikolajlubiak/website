@@ -4,7 +4,7 @@ date: 2026-03-14
 tags: ['embedded', 'esp32', 'c++', 'c', 'bluetooth', 'ble', 'e-paper', 'protocol-design', 'app', 'flutter']
 ---
 
-[PixelPin](https://github.com/mikolajlubiak/pixelpin) is an ESP32-powered e-paper wearable that leverages a Flutter companion app for image pre-processing. By shifting heavy computational tasks—specifically resizing and color space conversion—to the smartphone, the firmware is optimized for high-speed data ingestion and specialized dithering for 3-color electrophoretic displays.
+[PixelPin](https://github.com/mikolajlubiak/pixelpin) is an ESP32-powered e-paper wearable that leverages a Flutter companion app for image pre-processing. By shifting heavy computational tasks - specifically resizing and color space conversion - to the smartphone, the firmware is optimized for high-speed data ingestion and specialized dithering for 3-color electrophoretic displays.
 
 This post breaks down the high-throughput BLE implementation, the RGB565-to-EPD pipeline, and the bit-packing logic required for the hardware.
 
@@ -53,7 +53,7 @@ Every packet starts with a 1-byte Command Identifier (CID):
 
 The EPD is a 3-color device, but the input is 16-bit color. We use **Floyd-Steinberg error diffusion** to map the RGB565 space into the physical palette (Black, White, Red) while preserving visual gradients.
 
-The algorithm processes the `image_buffer` in-place to save SRAM. For each pixel, it calculates the quantization error—the difference between the RGB565 value and the closest hardware color—and distributes that error to neighboring pixels.
+The algorithm processes the `image_buffer` in-place to save SRAM. For each pixel, it calculates the quantization error - the difference between the RGB565 value and the closest hardware color - and distributes that error to neighboring pixels.
 
 ```cpp
 // RGB565 decomposition
