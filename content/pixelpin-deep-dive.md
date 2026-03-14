@@ -14,7 +14,7 @@ The system utilizes a 4-wire SPI interface to drive a 3-color (Black, White, Red
 
 ```
 ┌─────────────┐    BLE (GATT)    ┌─────────────┐     SPI     ┌─────────────┐
-│   Phone     │─────────────────▶│   ESP32     │────────────▶│  E-Paper    │
+│   Phone     │────────────────▶│   ESP32     │───────────▶│  E-Paper    │
 │ (RGB565 Pre-│  512B MTU        │ (Dithering  │  Raw Bits   │  Display    │
 │ processing) │  High Speed      │ & Packing)  │ (2 Buffers) │  (3-color)  │
 └─────────────┘                  └─────────────┘             └─────────────┘
