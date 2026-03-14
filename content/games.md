@@ -1,6 +1,6 @@
 ---
 title: "Games"
-date: 2024-03-03T00:00:00+01:00
+date: 2024-03-03
 tags: ['games', 'raylib', 'c++']
 ---
 

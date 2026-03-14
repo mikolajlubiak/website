@@ -1,6 +1,6 @@
 ---
 title: "TLS-ALPN-01"
-date: 2023-08-26T15:00:00+01:00
+date: 2023-08-26
 tags: ['tls','alpn','acme','ssl-certificate','website','hosting','caddy']
 ---
 

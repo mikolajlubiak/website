@@ -1,6 +1,6 @@
 ---
 title: "BCHS: BSD, C, httpd, SQLite"
-date: 2022-11-03T15:00:00+01:00
+date: 2022-11-03
 tags: ['openbsd','c','httpd','website','tls','bchs','ssl-certificate','networking','cgi']
 ---
 

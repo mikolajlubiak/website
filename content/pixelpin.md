@@ -1,7 +1,8 @@
 ---
 title: "PixelPin"
-date: 2024-02-18T15:00:00+01:00
-tags: ['arduino', 'embedded', 'esp32', 'c++', 'c', 'bluetooth', 'app', 'flutter']
+date: 2024-02-18
+tags: ['embedded', 'esp32', 'c++', 'c', 'bluetooth', 'app', 'flutter']
+tags: ['embedded', 'esp32', 'c++', 'c', 'bluetooth', 'ble', 'e-paper', 'app', 'flutter']
 ---
 
 # Background
