@@ -4,8 +4,6 @@ date: 2026-03-14
 tags: ['embedded', 'esp32', 'c++', 'c', 'bluetooth', 'ble', 'e-paper', 'protocol-design', 'app', 'flutter']
 ---
 
-# BLE Protocol Design for Embedded Wearables: The PixelPin Deep Dive
-
 [PixelPin](https://github.com/mikolajlubiak/pixelpin) is a wearable e-paper display pin I designed and built. It's powered by an ESP32, receives images over Bluetooth Low Energy from a [Flutter companion app](https://github.com/mikolajlubiak/pixelpin-app), applies Floyd-Steinberg dithering for 3-color output, and renders the result on an e-paper display.
 
 This post covers the hardest parts: the custom BLE protocol, the image processing pipeline, and the bit-level manipulations needed to drive an e-paper display.
